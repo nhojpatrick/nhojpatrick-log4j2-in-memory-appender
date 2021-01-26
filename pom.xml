@@ -810,6 +810,12 @@
 		<!-- plugin versions -->
 		<!-- dependency versions -->
 		<version.org.apache.logging.log4j>2.14.0</version.org.apache.logging.log4j>
+		<!-- qa user properties -->
+		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
+		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
+		<jacoco.bundle.line.coveredratio>100%</jacoco.bundle.line.coveredratio>
+		<pmd.maxAllowedViolations>0</pmd.maxAllowedViolations>
+		<spotbugs.maxAllowedViolations>0</spotbugs.maxAllowedViolations>
 		<!-- checkstyle -->
 		<checkstyle.config.location>com/github/nhojpatrick/qa/checkstyle/rules/rules.xml</checkstyle.config.location>
 		<!-- sortpom -->
