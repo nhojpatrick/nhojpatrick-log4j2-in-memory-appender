@@ -1,5 +1,6 @@
 package com.github.nhojpatrick.log4j2.appenders.inmemory;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.apache.logging.log4j.core.Appender;
 import org.apache.logging.log4j.core.Core;
 import org.apache.logging.log4j.core.Filter;
@@ -44,6 +45,7 @@ public class InMemoryAppender
                 .add(message);
     }
 
+    @SuppressFBWarnings(value = {"UP_UNUSED_PARAMETER"}, justification = "As designed")
     @PluginFactory
     public static InMemoryAppender createAppender(@PluginAttribute("name") String name,
                                                   @PluginElement("Layout") Layout<? extends Serializable> layout,
