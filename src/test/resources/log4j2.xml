@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="com.github.nhojpatrick.log4j2.appenders.inmemory">
+   <Appenders>
+      <Console name="Console" target="SYSTEM_OUT">
+         <PatternLayout pattern="TestConsole %-5p %l %m%n"/>
+      </Console>
+      <InMemoryAppender name="InMemoryAppender">
+         <PatternLayout pattern="%m%n"/>
+      </InMemoryAppender>
+   </Appenders>
+   <Loggers>
+      <Logger name="com.github.nhojpatrick.log4j2.appenders.inmemory" level="debug">
+         <AppenderRef ref="Console"/>
+         <AppenderRef ref="InMemoryAppender"/>
+      </Logger>
+      <Logger name="com.github.nhojpatrick" level="info">
+         <AppenderRef ref="Console"/>
+      </Logger>
+      <Root level="error">
+         <AppenderRef ref="Console"/>
+      </Root>
+   </Loggers>
+</Configuration>
