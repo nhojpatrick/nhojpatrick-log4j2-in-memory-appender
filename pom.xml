@@ -810,6 +810,8 @@
 		<!-- plugin versions -->
 		<!-- dependency versions -->
 		<version.org.apache.logging.log4j>2.14.0</version.org.apache.logging.log4j>
+		<!-- checkstyle -->
+		<checkstyle.config.location>com/github/nhojpatrick/qa/checkstyle/rules/rules.xml</checkstyle.config.location>
 		<!-- sortpom -->
 		<sort.createBackupFile>false</sort.createBackupFile>
 		<sort.nrOfIndentSpace>-1</sort.nrOfIndentSpace>
