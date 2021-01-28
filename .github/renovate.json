@@ -5,8 +5,9 @@
   "dependencyDashboard": true,
   "excludeCommitPaths": ["relocation_**"],
   "labels": ["dependencies"],
-  "additionalReviewers" : ["nhojpatrick"],
+  "assignees" : ["nhojpatrick"],
   "reviewers" : ["nhojpatrick"],
+  "additionalReviewers" : ["nhojpatrick"],
   "prHourlyLimit": 0,
   "separateMinorPatch": true,
   "separateMultipleMajor": true
