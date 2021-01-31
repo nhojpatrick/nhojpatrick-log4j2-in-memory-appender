@@ -6,8 +6,6 @@
   "excludeCommitPaths": ["relocation_**"],
   "labels": ["dependencies"],
   "assignees" : ["nhojpatrick"],
-  "reviewers" : ["nhojpatrick"],
-  "additionalReviewers" : ["nhojpatrick"],
   "prHourlyLimit": 0,
   "separateMinorPatch": true,
   "separateMultipleMajor": true
