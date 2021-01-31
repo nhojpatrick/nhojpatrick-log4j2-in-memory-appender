@@ -3,7 +3,7 @@
     "config:base"
   ],
   "dependencyDashboard": true,
-  "excludeCommitPaths": ["relocation_**"],
+  "excludeCommitPaths": ["relocation/**"],
   "labels": ["dependencies"],
   "assignees" : ["nhojpatrick"],
   "prHourlyLimit": 0,
