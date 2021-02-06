@@ -1,4 +1,4 @@
-# Log4J2 In-Memory Appender
+# nhojpatrick Log4J2 In-Memory Appender
 
 ![GitHub](https://img.shields.io/github/license/nhojpatrick/nhojpatrick-log4j2-in-memory-appender?style=plastic)
 ![Maven Central](https://img.shields.io/maven-central/v/com.github.nhojpatrick.log4j2.appenders/nhojpatrick-log4j2-in-memory-appender)
