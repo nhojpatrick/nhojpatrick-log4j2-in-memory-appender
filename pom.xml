@@ -117,7 +117,7 @@
 						<dependency>
 							<groupId>com.puppycrawl.tools</groupId>
 							<artifactId>checkstyle</artifactId>
-							<version>8.40</version>
+							<version>${version.com.puppycrawl.tools.checkstyle}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -826,6 +826,7 @@
 		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.2.0</plugins.com.github.spotbugs.spotbugs-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.2.1</version.com.github.spotbugs>
+		<version.com.puppycrawl.tools.checkstyle>8.40</version.com.puppycrawl.tools.checkstyle>
 		<version.org.apache.logging.log4j>2.14.0</version.org.apache.logging.log4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
