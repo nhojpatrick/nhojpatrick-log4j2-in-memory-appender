@@ -91,7 +91,7 @@
 						<dependency>
 							<groupId>com.github.spotbugs</groupId>
 							<artifactId>spotbugs</artifactId>
-							<version>4.2.0</version>
+							<version>${version.com.github.spotbugs}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -765,7 +765,7 @@
 			<dependency>
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-annotations</artifactId>
-				<version>4.2.0</version>
+				<version>${version.com.github.spotbugs}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
@@ -824,6 +824,7 @@
 		<!-- plugin versions -->
 		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.2.0</plugins.com.github.spotbugs.spotbugs-maven-plugin>
 		<!-- dependency versions -->
+		<version.com.github.spotbugs>4.2.0</version.com.github.spotbugs>
 		<version.org.apache.logging.log4j>2.14.0</version.org.apache.logging.log4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
