@@ -827,7 +827,7 @@
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.2.2</version.com.github.spotbugs>
 		<version.com.puppycrawl.tools.checkstyle>8.41</version.com.puppycrawl.tools.checkstyle>
-		<version.org.apache.logging.log4j>2.14.0</version.org.apache.logging.log4j>
+		<version.org.apache.logging.log4j>2.14.1</version.org.apache.logging.log4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
