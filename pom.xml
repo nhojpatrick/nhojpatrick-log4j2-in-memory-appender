@@ -822,7 +822,7 @@
 		<project.build.sourceEncoding>${project.custom.encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
-		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>2.13.1</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
+		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>2.14.0</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
 		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.2.0</plugins.com.github.spotbugs.spotbugs-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.2.2</version.com.github.spotbugs>
