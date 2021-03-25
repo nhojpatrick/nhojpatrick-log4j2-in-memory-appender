@@ -67,7 +67,7 @@ commands:
                 <id>openjdk-1.8</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/openjdk-11</jdkHome>
+                <jdkHome>/usr/local/jdk-11.0.10</jdkHome>
               </configuration>
             </toolchain>
             <toolchain>
@@ -78,7 +78,7 @@ commands:
                 <id>openjdk-11</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/openjdk-11</jdkHome>
+                <jdkHome>/usr/local/jdk-11.0.10</jdkHome>
               </configuration>
             </toolchain>
           </toolchains>
@@ -220,7 +220,7 @@ jobs:
 
   jdk11:
     docker:
-      - image: circleci/openjdk:11-jdk-stretch
+      - image: cimg/openjdk:11.0
     resource_class: small
     steps:
       - setup_openjdk_11_toolchain
