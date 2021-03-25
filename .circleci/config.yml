@@ -34,7 +34,7 @@ commands:
                 <id>openjdk-1.8</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/openjdk-8</jdkHome>
+                <jdkHome>/usr/local/jdk-8.0.282</jdkHome>
               </configuration>
             </toolchain>
             <toolchain>
@@ -190,7 +190,7 @@ jobs:
 
   jdk8:
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     resource_class: small
     steps:
       - install_openjdk_11
@@ -205,7 +205,7 @@ jobs:
 
   jdk8_tests_jdk11:
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     resource_class: small
     steps:
       - install_openjdk_11
@@ -237,7 +237,7 @@ jobs:
       qa_step_profile:
         type: string
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     resource_class: small
     steps:
       - install_openjdk_11
@@ -253,7 +253,7 @@ jobs:
 
   qa_owasp_dependency_check:
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     resource_class: medium
     steps:
       - install_openjdk_11
