@@ -84,6 +84,39 @@ commands:
           </toolchains>
           EOF
 
+  setup_openjdk_16_toolchain:
+    description: "Setup ToolChain for OpenJdk 16"
+    steps:
+      - run: mkdir ~/.m2
+      - run: |
+          cat > ~/.m2/toolchains.xml \<< EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>1.8</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-1.8</id>
+              </provides>
+              <configuration>
+                <jdkHome>/usr/local/jdk-16.0.0</jdkHome>
+              </configuration>
+            </toolchain>
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>11</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-11</id>
+              </provides>
+              <configuration>
+                <jdkHome>/usr/local/jdk-16.0.0</jdkHome>
+              </configuration>
+            </toolchain>
+          </toolchains>
+          EOF
+
   std_mvnw_jdk8:
     description: "Standard JDK8 mvnw steps"
     steps:
@@ -116,6 +149,16 @@ commands:
           command: ./mvnw -Pcicd clean verify -DskipTests
       - run:
           name: "Maven Jdk11 Tests"
+          command: ./mvnw -Pcicd verify
+
+  std_mvnw_jdk16:
+    description: "Standard JDK16 mvnw steps"
+    steps:
+      - run:
+          name: "Maven Jdk16 Clean Install SkipTests"
+          command: ./mvnw -Pcicd clean verify -DskipTests
+      - run:
+          name: "Maven Jdk16 Tests"
           command: ./mvnw -Pcicd verify
 
   qa_step:
@@ -232,6 +275,20 @@ jobs:
       - cache_save:
           cacheSaveName: jdk11
 
+  jdk16:
+    docker:
+      - image: cimg/openjdk:16.0
+    resource_class: small
+    steps:
+      - setup_openjdk_16_toolchain
+      - checkout
+      - cache_restore:
+          cacheAlphaName: jdk16
+          cacheBravoName: jdk16
+      - std_mvnw_jdk16
+      - cache_save:
+          cacheSaveName: jdk16
+
   qa_matrix:
     parameters:
       qa_step_profile:
@@ -288,12 +345,14 @@ workflows:
       - jdk8
       - jdk8_tests_jdk11
       - jdk11
+      - jdk16
 
       - passed_builds:
           requires:
             - jdk8
             - jdk8_tests_jdk11
             - jdk11
+            - jdk16
 
       - qa_matrix:
           name: qa_<< matrix.qa_step_profile >>
