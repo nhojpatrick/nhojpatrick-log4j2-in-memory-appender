@@ -826,7 +826,7 @@
 		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.2.2</plugins.com.github.spotbugs.spotbugs-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.2.2</version.com.github.spotbugs>
-		<version.com.puppycrawl.tools.checkstyle>8.41</version.com.puppycrawl.tools.checkstyle>
+		<version.com.puppycrawl.tools.checkstyle>8.41.1</version.com.puppycrawl.tools.checkstyle>
 		<version.org.apache.logging.log4j>2.14.1</version.org.apache.logging.log4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
