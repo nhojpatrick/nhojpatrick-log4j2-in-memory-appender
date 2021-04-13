@@ -67,7 +67,7 @@
 				<plugin>
 					<groupId>com.github.spotbugs</groupId>
 					<artifactId>spotbugs-maven-plugin</artifactId>
-					<version>${plugins.com.github.spotbugs.spotbugs-maven-plugin}</version>
+					<version>4.2.2</version>
 					<configuration>
 						<plugins>
 							<plugin>
@@ -91,7 +91,7 @@
 						<dependency>
 							<groupId>com.github.spotbugs</groupId>
 							<artifactId>spotbugs</artifactId>
-							<version>${version.com.github.spotbugs}</version>
+							<version>4.2.2</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -765,7 +765,7 @@
 			<dependency>
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-annotations</artifactId>
-				<version>${version.com.github.spotbugs}</version>
+				<version>4.2.2</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
@@ -823,9 +823,7 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
 		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>2.15.0</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
-		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.2.2</plugins.com.github.spotbugs.spotbugs-maven-plugin>
 		<!-- dependency versions -->
-		<version.com.github.spotbugs>4.2.2</version.com.github.spotbugs>
 		<version.com.puppycrawl.tools.checkstyle>8.41.1</version.com.puppycrawl.tools.checkstyle>
 		<version.org.apache.logging.log4j>2.14.1</version.org.apache.logging.log4j>
 		<!-- qa user properties -->
