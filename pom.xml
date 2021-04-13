@@ -117,7 +117,7 @@
 						<dependency>
 							<groupId>com.puppycrawl.tools</groupId>
 							<artifactId>checkstyle</artifactId>
-							<version>${version.com.puppycrawl.tools.checkstyle}</version>
+							<version>8.41.1</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -823,7 +823,6 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
 		<!-- dependency versions -->
-		<version.com.puppycrawl.tools.checkstyle>8.41.1</version.com.puppycrawl.tools.checkstyle>
 		<version.org.apache.logging.log4j>2.14.1</version.org.apache.logging.log4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
