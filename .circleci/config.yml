@@ -67,7 +67,7 @@ commands:
                 <id>openjdk-1.8</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-11.0.10</jdkHome>
+                <jdkHome>/usr/local/jdk-11.0.12</jdkHome>
               </configuration>
             </toolchain>
             <toolchain>
@@ -78,7 +78,7 @@ commands:
                 <id>openjdk-11</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-11.0.10</jdkHome>
+                <jdkHome>/usr/local/jdk-11.0.12</jdkHome>
               </configuration>
             </toolchain>
           </toolchains>
