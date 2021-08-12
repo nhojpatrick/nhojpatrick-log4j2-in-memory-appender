@@ -34,7 +34,7 @@ commands:
                 <id>openjdk-1.8</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-8.0.282</jdkHome>
+                <jdkHome>/usr/local/jdk-8.0.292</jdkHome>
               </configuration>
             </toolchain>
             <toolchain>
