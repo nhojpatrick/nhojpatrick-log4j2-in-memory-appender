@@ -60,10 +60,13 @@ public class InMemoryAppender
         return new InMemoryAppender(name, filter, layout);
     }
 
+    @SuppressFBWarnings(value = "EI_EXPOSE_REP", justification = "Accepted will look at changing 'return messages;'")
     public List<String> getMessages() {
         return messages;
     }
 
+    @SuppressFBWarnings(value = "EI_EXPOSE_REP",
+            justification = "Accepted will look at changing 'this.messages = messages;'")
     public void setMessages(List<String> messages) {
         this.messages = messages;
     }
