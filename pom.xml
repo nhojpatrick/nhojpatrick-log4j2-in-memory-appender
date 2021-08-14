@@ -91,7 +91,7 @@
 						<dependency>
 							<groupId>com.github.spotbugs</groupId>
 							<artifactId>spotbugs</artifactId>
-							<version>4.4.0</version>
+							<version>${version.com.github.spotbugs}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -765,7 +765,7 @@
 			<dependency>
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-annotations</artifactId>
-				<version>4.4.0</version>
+				<version>${version.com.github.spotbugs}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
@@ -823,6 +823,7 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
 		<!-- dependency versions -->
+		<version.com.github.spotbugs>4.4.0</version.com.github.spotbugs>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
