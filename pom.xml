@@ -20,7 +20,7 @@
 	<!--issueManagement / -->
 	<issueManagement>
 		<system>GITHUB</system>
-		<url>http://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender/issues</url>
+		<url>https://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender/issues</url>
 	</issueManagement>
 	<!--ciManagement / -->
 	<!--inceptionYear / -->
@@ -45,7 +45,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender.git</connection>
 		<developerConnection>scm:git:ssh://github.com:nhojpatrick/nhojpatrick-log4j2-in-memory-appender.git</developerConnection>
-		<url>http://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender/tree/master</url>
+		<url>https://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender/tree/master</url>
 	</scm>
 	<!--organization / -->
 	<!--build / -->
