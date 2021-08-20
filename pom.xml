@@ -783,9 +783,11 @@
 				<version>2.2</version>
 			</dependency>
 			<dependency>
-				<groupId>org.junit.jupiter</groupId>
-				<artifactId>junit-jupiter-engine</artifactId>
-				<version>5.8.0-RC1</version>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>${version.org.junit}</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -824,6 +826,7 @@
 		<!-- plugin versions -->
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.4.0</version.com.github.spotbugs>
+		<version.org.junit>5.8.0-RC1</version.org.junit>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
