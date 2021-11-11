@@ -825,7 +825,7 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
 		<!-- dependency versions -->
-		<version.com.github.spotbugs>4.4.2</version.com.github.spotbugs>
+		<version.com.github.spotbugs>4.5.0</version.com.github.spotbugs>
 		<version.org.junit>5.8.1</version.org.junit>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
