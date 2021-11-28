@@ -826,7 +826,7 @@
 		<!-- plugin versions -->
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.5.0</version.com.github.spotbugs>
-		<version.org.junit>5.8.1</version.org.junit>
+		<version.org.junit>5.8.2</version.org.junit>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
