@@ -826,7 +826,7 @@
 		<!-- plugin versions -->
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.5.1</version.com.github.spotbugs>
-		<version.org.apache.logging.log4j>2.15.0</version.org.apache.logging.log4j>
+		<version.org.apache.logging.log4j>2.16.0</version.org.apache.logging.log4j>
 		<version.org.junit>5.8.2</version.org.junit>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
