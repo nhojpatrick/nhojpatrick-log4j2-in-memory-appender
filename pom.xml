@@ -11,7 +11,7 @@
 	<!--name / -->
 	<name>Log4J In-Memory Appender</name>
 	<!--version / -->
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<!--description / -->
 	<description>Log4J In-Memory Appender project</description>
 	<!--url / -->
