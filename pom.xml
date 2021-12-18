@@ -763,6 +763,15 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<?SORTPOM IGNORE?>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>${version.org.junit}</version>
+				<type>pom</type>
+				<scope>import</scope>
+				<?SORTPOM RESUME?>
+			</dependency>
+			<dependency>
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-annotations</artifactId>
 				<version>${version.com.github.spotbugs}</version>
@@ -781,13 +790,6 @@
 				<groupId>org.hamcrest</groupId>
 				<artifactId>hamcrest</artifactId>
 				<version>2.2</version>
-			</dependency>
-			<dependency>
-				<groupId>org.junit</groupId>
-				<artifactId>junit-bom</artifactId>
-				<version>${version.org.junit}</version>
-				<type>pom</type>
-				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
