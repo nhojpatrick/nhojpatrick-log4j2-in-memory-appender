@@ -798,7 +798,7 @@
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>1.7.32</version>
+				<version>${version.org.slf4j}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -835,6 +835,7 @@
 		<version.com.github.spotbugs>4.5.2</version.com.github.spotbugs>
 		<version.org.apache.logging.log4j>2.17.0</version.org.apache.logging.log4j>
 		<version.org.junit>5.8.2</version.org.junit>
+		<version.org.slf4j>1.7.32</version.org.slf4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
