@@ -254,7 +254,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M5</version>
+					<version>${plugins.maven.maven-surefire-plugin}</version>
 					<configuration>
 						<excludes>
 							<exclude>**/*IT.java</exclude>
@@ -847,6 +847,7 @@
 		<plugins.maven.maven-resources-plugin>3.2.0</plugins.maven.maven-resources-plugin>
 		<plugins.maven.maven-site-plugin>3.9.1</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
+		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- dependency versions -->
