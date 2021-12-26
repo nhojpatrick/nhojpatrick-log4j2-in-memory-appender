@@ -303,7 +303,7 @@
 				<plugin>
 					<groupId>org.eluder.coveralls</groupId>
 					<artifactId>coveralls-maven-plugin</artifactId>
-					<version>4.3.0</version>
+					<version>${plugins.org.eluder.coveralls.coveralls-maven-plugin}</version>
 					<configuration>
 						<repoToken>${COVERALLS_REPO_TOKEN}</repoToken>
 					</configuration>
@@ -851,6 +851,7 @@
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.7</plugins.org.jacoco.jacoco-maven-plugin>
 		<plugins.org.owasp.dependency-check-maven>6.5.1</plugins.org.owasp.dependency-check-maven>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
