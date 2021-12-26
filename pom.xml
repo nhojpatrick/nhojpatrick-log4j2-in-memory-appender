@@ -359,7 +359,7 @@
 				<plugin>
 					<groupId>org.owasp</groupId>
 					<artifactId>dependency-check-maven</artifactId>
-					<version>6.5.1</version>
+					<version>${plugins.org.owasp.dependency-check-maven}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
@@ -851,6 +851,7 @@
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.org.owasp.dependency-check-maven>6.5.1</plugins.org.owasp.dependency-check-maven>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.5.2</version.com.github.spotbugs>
