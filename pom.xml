@@ -178,7 +178,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>3.0.0-M5</version>
+					<version>${plugins.maven.maven-failsafe-plugin}</version>
 					<configuration>
 						<includes>
 							<include>**/*IT.java</include>
@@ -838,6 +838,7 @@
 		<plugins.maven.maven-dependency-plugin>3.2.0</plugins.maven.maven-dependency-plugin>
 		<plugins.maven.maven-deploy-plugin>3.0.0-M1</plugins.maven.maven-deploy-plugin>
 		<plugins.maven.maven-enforcer-plugin>3.0.0</plugins.maven.maven-enforcer-plugin>
+		<plugins.maven.maven-failsafe-plugin>3.0.0-M5</plugins.maven.maven-failsafe-plugin>
 		<plugins.maven.maven-gpg-plugin>3.0.1</plugins.maven.maven-gpg-plugin>
 		<plugins.maven.maven-install-plugin>3.0.0-M1</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-jar-plugin>3.2.0</plugins.maven.maven-jar-plugin>
