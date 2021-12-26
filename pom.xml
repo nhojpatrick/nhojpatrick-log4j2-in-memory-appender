@@ -158,7 +158,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>3.0.0-M1</version>
+					<version>${plugins.maven.maven-deploy-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -835,6 +835,7 @@
 		<plugins.maven.maven-clean-plugin>3.1.0</plugins.maven.maven-clean-plugin>
 		<plugins.maven.maven-compiler-plugin>3.8.1</plugins.maven.maven-compiler-plugin>
 		<plugins.maven.maven-dependency-plugin>3.2.0</plugins.maven.maven-dependency-plugin>
+		<plugins.maven.maven-deploy-plugin>3.0.0-M1</plugins.maven.maven-deploy-plugin>
 		<plugins.maven.maven-enforcer-plugin>3.0.0</plugins.maven.maven-enforcer-plugin>
 		<plugins.maven.maven-install-plugin>3.0.0-M1</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-resources-plugin>3.2.0</plugins.maven.maven-resources-plugin>
