@@ -769,6 +769,15 @@
 		<dependencies>
 			<dependency>
 				<?SORTPOM IGNORE?>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-bom</artifactId>
+				<version>${version.org.apache.logging.log4j}</version>
+				<type>pom</type>
+				<scope>import</scope>
+				<?SORTPOM RESUME?>
+			</dependency>
+			<dependency>
+				<?SORTPOM IGNORE?>
 				<groupId>org.junit</groupId>
 				<artifactId>junit-bom</artifactId>
 				<version>${version.org.junit}</version>
@@ -780,16 +789,6 @@
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-annotations</artifactId>
 				<version>${version.com.github.spotbugs}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-core</artifactId>
-				<version>${version.org.apache.logging.log4j}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-slf4j-impl</artifactId>
-				<version>${version.org.apache.logging.log4j}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.hamcrest</groupId>
