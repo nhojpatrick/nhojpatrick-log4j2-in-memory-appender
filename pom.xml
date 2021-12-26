@@ -249,7 +249,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>3.2.1</version>
+					<version>${plugins.maven.maven-source-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -846,6 +846,7 @@
 		<plugins.maven.maven-pmd-plugin>3.15.0</plugins.maven.maven-pmd-plugin>
 		<plugins.maven.maven-resources-plugin>3.2.0</plugins.maven.maven-resources-plugin>
 		<plugins.maven.maven-site-plugin>3.9.1</plugins.maven.maven-site-plugin>
+		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- dependency versions -->
