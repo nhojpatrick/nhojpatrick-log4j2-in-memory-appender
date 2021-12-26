@@ -214,7 +214,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.3.1</version>
+					<version>${plugins.maven.maven-javadoc-plugin}</version>
 					<configuration>
 						<source>1.8</source>
 					</configuration>
@@ -841,6 +841,7 @@
 		<plugins.maven.maven-gpg-plugin>3.0.1</plugins.maven.maven-gpg-plugin>
 		<plugins.maven.maven-install-plugin>3.0.0-M1</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-jar-plugin>3.2.0</plugins.maven.maven-jar-plugin>
+		<plugins.maven.maven-javadoc-plugin>3.3.1</plugins.maven.maven-javadoc-plugin>
 		<plugins.maven.maven-resources-plugin>3.2.0</plugins.maven.maven-resources-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
