@@ -868,7 +868,7 @@
 		<plugins.maven.maven-javadoc-plugin>3.3.1</plugins.maven.maven-javadoc-plugin>
 		<plugins.maven.maven-pmd-plugin>3.15.0</plugins.maven.maven-pmd-plugin>
 		<plugins.maven.maven-resources-plugin>3.2.0</plugins.maven.maven-resources-plugin>
-		<plugins.maven.maven-site-plugin>3.9.1</plugins.maven.maven-site-plugin>
+		<plugins.maven.maven-site-plugin>3.10.0</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
