@@ -435,8 +435,6 @@
 		<profile>
 			<id>cicd</id>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -675,8 +673,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -728,8 +724,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -754,8 +748,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<includeDebug>true</includeDebug>
 				<sort.skip>true</sort.skip>
 			</properties>
