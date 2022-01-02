@@ -270,6 +270,11 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-report-plugin</artifactId>
+					<version>${plugins.maven.maven-surefire-report-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-toolchains-plugin</artifactId>
 					<version>${plugins.maven.maven-toolchains-plugin}</version>
 					<configuration>
@@ -876,6 +881,7 @@
 		<plugins.maven.maven-site-plugin>3.10.0</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
+		<plugins.maven.maven-surefire-report-plugin>3.0.0-M5</plugins.maven.maven-surefire-report-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.maven.maven-wrapper-plugin>3.1.0</plugins.maven.maven-wrapper-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
