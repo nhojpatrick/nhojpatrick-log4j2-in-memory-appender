@@ -96,11 +96,6 @@
 					</dependencies>
 				</plugin>
 				<plugin>
-					<groupId>io.takari</groupId>
-					<artifactId>maven</artifactId>
-					<version>${plugins.takari.maven}</version>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-checkstyle-plugin</artifactId>
 					<version>${plugins.maven.maven-checkstyle-plugin}</version>
@@ -292,6 +287,11 @@
 							</goals>
 						</execution>
 					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-wrapper-plugin</artifactId>
+					<version>${plugins.maven.maven-wrapper-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -739,8 +739,8 @@
 				<defaultGoal>validate</defaultGoal>
 				<plugins>
 					<plugin>
-						<groupId>io.takari</groupId>
-						<artifactId>maven</artifactId>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-wrapper-plugin</artifactId>
 						<executions>
 							<execution>
 								<id>wrapper-latest</id>
@@ -756,6 +756,7 @@
 			<properties>
 				<downloadJavadocs>false</downloadJavadocs>
 				<downloadSources>false</downloadSources>
+				<includeDebug>true</includeDebug>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -884,11 +885,11 @@
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.maven.maven-wrapper-plugin>3.1.0</plugins.maven.maven-wrapper-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.7</plugins.org.jacoco.jacoco-maven-plugin>
 		<plugins.org.owasp.dependency-check-maven>6.5.1</plugins.org.owasp.dependency-check-maven>
 		<plugins.org.sonatype.plugins.nexus-staging-maven-plugin>1.6.8</plugins.org.sonatype.plugins.nexus-staging-maven-plugin>
-		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.5.2</version.com.github.spotbugs>
 		<version.com.puppycrawl.tools.checkstyle>9.2.1</version.com.puppycrawl.tools.checkstyle>
