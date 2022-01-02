@@ -243,6 +243,11 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-remote-resources-plugin</artifactId>
+					<version>${plugins.maven.maven-remote-resources-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>${plugins.maven.maven-resources-plugin}</version>
 				</plugin>
@@ -891,6 +896,7 @@
 		<plugins.maven.maven-javadoc-plugin>3.3.1</plugins.maven.maven-javadoc-plugin>
 		<plugins.maven.maven-pmd-plugin>3.15.0</plugins.maven.maven-pmd-plugin>
 		<plugins.maven.maven-project-info-reports-plugin>3.1.2</plugins.maven.maven-project-info-reports-plugin>
+		<plugins.maven.maven-remote-resources-plugin>1.7.0</plugins.maven.maven-remote-resources-plugin>
 		<plugins.maven.maven-resources-plugin>3.2.0</plugins.maven.maven-resources-plugin>
 		<plugins.maven.maven-scm-plugin>1.12.2</plugins.maven.maven-scm-plugin>
 		<plugins.maven.maven-scm-publish-plugin>3.1.0</plugins.maven.maven-scm-publish-plugin>
