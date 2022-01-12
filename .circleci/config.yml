@@ -139,7 +139,7 @@ commands:
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean verify -DskipTests
       - run:
           name: "Maven Jdk8 Build Jdk11 Tests"
-          command: export JAVA_HOME=/usr/local/openjdk-11 && export PATH=${JAVA_HOME}/bin:{$PATH} && ./mvnw -Pcicd verify
+          command: export JAVA_HOME=/usr/local/openjdk-11 && export PATH=${JAVA_HOME}/bin:{$PATH} && ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd verify
 
   std_mvnw_jdk11:
     description: "Standard JDK11 mvnw steps"
@@ -167,7 +167,7 @@ commands:
         type: string
     description: "Standard QA Step << parameters.stepName >>"
     steps:
-      - run: ./mvnw -Pcicd,qa_<< parameters.stepName >> -DskipTests verify
+      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_<< parameters.stepName >> -DskipTests verify
 
   cache_restore:
     parameters:
