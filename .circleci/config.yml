@@ -122,13 +122,13 @@ commands:
     steps:
       - run:
           name: "Maven Jdk8 Clean Install"
-          command: ./mvnw -Pcicd clean verify -DskipTests
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean verify -DskipTests
       - run:
           name: "Maven Jdk8 Tests"
-          command: ./mvnw -Pcicd verify
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd verify
       - run:
           name: "Coveralls"
-          command: ./mvnw -Pcicd,qa_jacoco -DCOVERALLS_REPO_TOKEN=${COVERALLS_REPO_TOKEN} verify jacoco:report coveralls:report
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_jacoco -DCOVERALLS_REPO_TOKEN=${COVERALLS_REPO_TOKEN} verify jacoco:report coveralls:report
           when: on_success
 
   mvnw_jdk8_tests_jdk11:
@@ -136,7 +136,7 @@ commands:
     steps:
       - run:
           name: "Maven Jdk8 Clean Install"
-          command: ./mvnw -Pcicd clean verify -DskipTests
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean verify -DskipTests
       - run:
           name: "Maven Jdk8 Build Jdk11 Tests"
           command: export JAVA_HOME=/usr/local/openjdk-11 && export PATH=${JAVA_HOME}/bin:{$PATH} && ./mvnw -Pcicd verify
@@ -146,20 +146,20 @@ commands:
     steps:
       - run:
           name: "Maven Jdk11 Clean Install SkipTests"
-          command: ./mvnw -Pcicd clean verify -DskipTests
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean verify -DskipTests
       - run:
           name: "Maven Jdk11 Tests"
-          command: ./mvnw -Pcicd verify
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd verify
 
   std_mvnw_jdk17:
     description: "Standard Jdk17 mvnw steps"
     steps:
       - run:
           name: "Maven Jdk17 Clean Install SkipTests"
-          command: ./mvnw -Pcicd clean verify -DskipTests
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean verify -DskipTests
       - run:
           name: "Maven Jdk17 Tests"
-          command: ./mvnw -Pcicd verify
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd verify
 
   qa_step:
     parameters:
@@ -328,7 +328,7 @@ jobs:
           command: ./mvnw -N -Pcicd org.owasp:dependency-check-maven:update-only -DdataDirectory=~/.m2/owasp-dependency-check-data
           no_output_timeout: 30m
       - run:
-          command: ./mvnw -Pcicd,qa_owasp-dependency-check -DskipTests verify -DdataDirectory=~/.m2/owasp-dependency-check-data
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_owasp-dependency-check -DskipTests verify -DdataDirectory=~/.m2/owasp-dependency-check-data
           no_output_timeout: 30m
       - cache_save:
           cacheSaveName: owasp-dependency-check
