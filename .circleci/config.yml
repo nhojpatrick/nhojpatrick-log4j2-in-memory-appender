@@ -206,7 +206,7 @@ commands:
       - run: mkdir -p ~/.m2/repository
       - run:
           name: "Tidy Local Maven Repo of project before save cache"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick/log4j2/appenders
+          command: rm -rf ~/.m2/repository/com/github/nhojpatrick/
           when: always
       - run:
           name: "Tidy Local Maven Repo of lastUpdated"
