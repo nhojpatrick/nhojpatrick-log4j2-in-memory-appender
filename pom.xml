@@ -83,7 +83,7 @@
 							<plugin>
 								<groupId>jp.skypencil.findbugs.slf4j</groupId>
 								<artifactId>bug-pattern</artifactId>
-								<version>1.5.0</version>
+								<version>${version.jp.skypencil.findbugs.slf4j.bug-pattern}</version>
 							</plugin>
 						</plugins>
 					</configuration>
@@ -913,6 +913,7 @@
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.5.3</version.com.github.spotbugs>
 		<version.com.puppycrawl.tools.checkstyle>9.2.1</version.com.puppycrawl.tools.checkstyle>
+		<version.jp.skypencil.findbugs.slf4j.bug-pattern>1.5.0</version.jp.skypencil.findbugs.slf4j.bug-pattern>
 		<version.org.apache.logging.log4j>2.17.1</version.org.apache.logging.log4j>
 		<version.org.hamcrest>2.2</version.org.hamcrest>
 		<version.org.junit>5.8.2</version.org.junit>
