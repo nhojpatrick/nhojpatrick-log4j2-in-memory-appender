@@ -73,7 +73,7 @@
 							<plugin>
 								<groupId>com.h3xstream.findsecbugs</groupId>
 								<artifactId>findsecbugs-plugin</artifactId>
-								<version>1.11.0</version>
+								<version>${version.com.h3xstream.findsecbugs.findsecbugs-plugin}</version>
 							</plugin>
 							<plugin>
 								<groupId>com.mebigfatguy.sb-contrib</groupId>
@@ -912,6 +912,7 @@
 		<plugins.org.sonatype.plugins.nexus-staging-maven-plugin>1.6.8</plugins.org.sonatype.plugins.nexus-staging-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.5.3</version.com.github.spotbugs>
+		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.11.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
 		<version.com.mebigfatguy.sb-contrib.sb-contrib>7.4.7</version.com.mebigfatguy.sb-contrib.sb-contrib>
 		<version.com.puppycrawl.tools.checkstyle>9.2.1</version.com.puppycrawl.tools.checkstyle>
 		<version.jp.skypencil.findbugs.slf4j.bug-pattern>1.5.0</version.jp.skypencil.findbugs.slf4j.bug-pattern>
