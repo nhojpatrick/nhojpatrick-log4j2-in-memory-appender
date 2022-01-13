@@ -916,7 +916,7 @@
 		<version.org.apache.logging.log4j>2.17.1</version.org.apache.logging.log4j>
 		<version.org.hamcrest>2.2</version.org.hamcrest>
 		<version.org.junit>5.8.2</version.org.junit>
-		<version.org.slf4j>1.7.32</version.org.slf4j>
+		<version.org.slf4j>1.7.33</version.org.slf4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
