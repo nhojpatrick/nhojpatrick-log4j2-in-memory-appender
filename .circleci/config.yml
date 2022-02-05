@@ -34,7 +34,7 @@ commands:
                 <id>openjdk-1.8</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-8.0.322</jdkHome>
+                <jdkHome>${JAVA_HOME}</jdkHome>
               </configuration>
             </toolchain>
             <toolchain>
@@ -67,7 +67,7 @@ commands:
                 <id>openjdk-1.8</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-11.0.13</jdkHome>
+                <jdkHome>${JAVA_HOME}</jdkHome>
               </configuration>
             </toolchain>
             <toolchain>
@@ -100,7 +100,7 @@ commands:
                 <id>openjdk-1.8</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-17.0.2</jdkHome>
+                <jdkHome>${JAVA_HOME}</jdkHome>
               </configuration>
             </toolchain>
             <toolchain>
