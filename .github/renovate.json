@@ -8,5 +8,8 @@
   "assignees" : ["nhojpatrick"],
   "prHourlyLimit": 0,
   "separateMinorPatch": true,
-  "separateMultipleMajor": true
+  "separateMultipleMajor": true,
+  "circleci": {"enabled": false},
+  "docker": {"enabled": false},
+  "docker-compose": {"enabled": false}
 }
