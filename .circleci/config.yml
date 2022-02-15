@@ -220,14 +220,16 @@ commands:
 
 jobs:
   passed_builds:
-    machine:
-      image: circleci/classic:latest
+    docker:
+      - image: cimg/base
+    resource_class: small
     steps:
       - run: echo "Build Passed"
 
   passed_qa:
-    machine:
-      image: circleci/classic:latest
+    docker:
+      - image: cimg/base
+    resource_class: small
     steps:
       - run: echo "QA Passed"
 
