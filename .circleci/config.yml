@@ -221,14 +221,14 @@ commands:
 jobs:
   passed_builds:
     docker:
-      - image: cimg/base
+      - image: cimg/base:stable
     resource_class: small
     steps:
       - run: echo "Build Passed"
 
   passed_qa:
     docker:
-      - image: cimg/base
+      - image: cimg/base:stable
     resource_class: small
     steps:
       - run: echo "QA Passed"
