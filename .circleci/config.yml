@@ -295,8 +295,10 @@ jobs:
     parameters:
       qa_step_profile:
         type: string
+      qa_step_jdk:
+        type: string
     docker:
-      - image: cimg/openjdk:8.0
+      - image: cimg/openjdk:<< parameters.qa_step_jdk >>
     resource_class: small
     steps:
       - install_openjdk_11
@@ -372,7 +374,7 @@ workflows:
             - jdk17
 
       - qa_matrix:
-          name: qa_<< matrix.qa_step_profile >>
+          name: qa_<< matrix.qa_step_profile >>_jdk_<< matrix.qa_step_jdk >>
           requires:
             - passed_builds
           filters:
@@ -388,6 +390,19 @@ workflows:
                 "pmd",
                 "spotbugs"
               ]
+              qa_step_jdk: [
+                "8.0",
+                "11.0"
+              ]
+            exclude:
+              - qa_step_profile: "checkstyle"
+                qa_step_jdk: "11.0"
+              - qa_step_profile: "javadoc"
+                qa_step_jdk: "11.0"
+              - qa_step_profile: "pmd"
+                qa_step_jdk: "11.0"
+              - qa_step_profile: "spotbugs"
+                qa_step_jdk: "11.0"
 
       - qa_owasp_dependency_check:
           requires:
