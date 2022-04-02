@@ -472,6 +472,8 @@
 		<profile>
 			<id>cicd</id>
 			<properties>
+				<downloadJavadocs>false</downloadJavadocs>
+				<downloadSources>false</downloadSources>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -887,6 +889,8 @@
 		<project.custom.encoding>UTF-8</project.custom.encoding>
 		<project.custom.java.version>1.8</project.custom.java.version>
 		<!-- maven user properties -->
+		<downloadJavadocs>true</downloadJavadocs>
+		<downloadSources>true</downloadSources>
 		<generateBackupPoms>false</generateBackupPoms>
 		<maven.compiler.source>${project.custom.java.version}</maven.compiler.source>
 		<maven.compiler.target>${project.custom.java.version}</maven.compiler.target>
