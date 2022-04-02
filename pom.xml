@@ -143,6 +143,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>${plugins.maven.maven-compiler-plugin}</version>
+					<configuration>
+						<compilerArgs>
+							<arg>-Xpkginfo:always</arg>
+						</compilerArgs>
+					</configuration>
 					<executions>
 						<execution>
 							<id>java11-main</id>
