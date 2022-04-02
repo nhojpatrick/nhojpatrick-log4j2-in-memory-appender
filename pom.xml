@@ -954,7 +954,7 @@
 		<spotbugs.maxAllowedViolations>0</spotbugs.maxAllowedViolations>
 		<!-- checkstyle -->
 		<checkstyle.config.location>com/github/nhojpatrick/qa/checkstyle/rules/rules.xml</checkstyle.config.location>
-		<!-- sortpom -->
+		<!-- sortpom-maven-plugin -->
 		<sort.createBackupFile>false</sort.createBackupFile>
 		<sort.nrOfIndentSpace>-1</sort.nrOfIndentSpace>
 		<sort.pomFile>pom.xml</sort.pomFile>
