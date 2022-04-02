@@ -660,6 +660,7 @@
 		<profile>
 			<id>release</id>
 			<build>
+				<defaultGoal>gitflow:release</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
