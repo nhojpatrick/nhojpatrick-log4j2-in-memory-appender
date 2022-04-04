@@ -616,6 +616,7 @@
 				</plugins>
 			</build>
 			<properties>
+				<maven.test.skip>true</maven.test.skip>
 				<pmd.verbose>true</pmd.verbose>
 				<sort.skip>true</sort.skip>
 			</properties>
