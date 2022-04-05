@@ -1,5 +1,7 @@
-package com.github.nhojpatrick.log4j2.appenders.inmemory;
+package com.github.nhojpatrick.log4j2.appenders.inmemory.tests;
 
+import com.github.nhojpatrick.log4j2.appenders.inmemory.InMemoryAppender;
+import com.github.nhojpatrick.log4j2.appenders.inmemory.InMemoryAppenderHelper;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
