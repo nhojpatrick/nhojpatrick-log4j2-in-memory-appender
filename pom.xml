@@ -233,14 +233,14 @@
 					<version>${plugins.maven.maven-pmd-plugin}</version>
 					<configuration>
 						<rulesets>
-							<ruleset>com/github/nhojpatrick/qa/pmd/ruleset/rules.xml</ruleset>
+							<ruleset>com/github/nhojpatrick/qa/ruleset/pmd/rules.xml</ruleset>
 						</rulesets>
 					</configuration>
 					<dependencies>
 						<dependency>
 							<groupId>com.github.nhojpatrick.qa</groupId>
-							<artifactId>nhojpatrick-pmd-ruleset</artifactId>
-							<version>[1.0.1,1.0.999)</version>
+							<artifactId>nhojpatrick-qa-ruleset-pmd</artifactId>
+							<version>[1.1.0,1.1.999)</version>
 						</dependency>
 					</dependencies>
 				</plugin>
