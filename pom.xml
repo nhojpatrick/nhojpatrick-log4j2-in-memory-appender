@@ -28,6 +28,12 @@
 	<inceptionYear>2019</inceptionYear>
 	<!--mailingLists / -->
 	<!--developers / -->
+	<developers>
+		<developer>
+			<name>John Patrick</name>
+			<email>142304+nhojpatrick@users.noreply.github.com</email>
+		</developer>
+	</developers>
 	<!--contributors / -->
 	<!--licenses / -->
 	<licenses>
