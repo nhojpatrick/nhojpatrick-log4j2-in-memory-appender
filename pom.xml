@@ -64,6 +64,8 @@
 							<productionBranch>main</productionBranch>
 							<versionTagPrefix>v</versionTagPrefix>
 						</gitFlowConfig>
+						<gpgSignCommit>true</gpgSignCommit>
+						<gpgSignTag>true</gpgSignTag>
 						<commitMessagePrefix xml:space="preserve">[gitflow] </commitMessagePrefix>
 						<commitMessages>
 							<releaseFinishMessage>Development v@{version}</releaseFinishMessage>
