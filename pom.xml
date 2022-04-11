@@ -16,6 +16,7 @@
 	<!--description / -->
 	<description>Log4J In-Memory Appender Parent project</description>
 	<!--url / -->
+	<url>https://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender</url>
 	<!--prerequisites / -->
 	<!--issueManagement / -->
 	<!--ciManagement / -->
