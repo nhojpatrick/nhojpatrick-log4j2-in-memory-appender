@@ -63,7 +63,7 @@
 						<dependency>
 							<groupId>com.github.nhojpatrick.qa</groupId>
 							<artifactId>nhojpatrick-sortpom-sortorderfile</artifactId>
-							<version>[1.0.0,1.0.999)</version>
+							<version>[1.1.0,1.1.999)</version>
 						</dependency>
 					</dependencies>
 				</plugin>
