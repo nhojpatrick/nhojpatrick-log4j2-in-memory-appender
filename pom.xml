@@ -19,6 +19,10 @@
 	<url>https://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender</url>
 	<!--prerequisites / -->
 	<!--issueManagement / -->
+	<issueManagement>
+		<system>GITHUB</system>
+		<url>https://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender/issues</url>
+	</issueManagement>
 	<!--ciManagement / -->
 	<!--inceptionYear / -->
 	<inceptionYear>2019</inceptionYear>
