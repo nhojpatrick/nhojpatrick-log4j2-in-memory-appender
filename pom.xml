@@ -43,6 +43,11 @@
 		</license>
 	</licenses>
 	<!--scm / -->
+	<scm>
+		<connection>scm:git:git://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender.git</connection>
+		<developerConnection>scm:git:ssh://github.com:nhojpatrick/nhojpatrick-log4j2-in-memory-appender.git</developerConnection>
+		<url>https://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender/tree/main</url>
+	</scm>
 	<!--organization / -->
 	<!--build / -->
 	<build>
