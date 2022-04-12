@@ -123,7 +123,9 @@
 					<version>${plugins.maven.maven-checkstyle-plugin}</version>
 					<configuration>
 						<consoleOutput>true</consoleOutput>
-						<failsOnError>true</failsOnError>
+						<failOnViolation>true</failOnViolation>
+						<failsOnError>false</failsOnError>
+						<logViolationsToConsole>true</logViolationsToConsole>
 					</configuration>
 					<dependencies>
 						<dependency>
