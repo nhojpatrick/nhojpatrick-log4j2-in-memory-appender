@@ -58,6 +58,7 @@
 					<artifactId>gitflow-maven-plugin</artifactId>
 					<version>${plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin}</version>
 					<configuration>
+						<argLine>-Pcicd,deployableArtifacts</argLine>
 						<postReleaseGoals>deploy</postReleaseGoals>
 						<gitFlowConfig>
 							<developmentBranch>develop</developmentBranch>
