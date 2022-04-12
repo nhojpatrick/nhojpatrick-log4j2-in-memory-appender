@@ -668,9 +668,8 @@
 			</properties>
 		</profile>
 		<profile>
-			<id>release</id>
+			<id>deployableArtifacts</id>
 			<build>
-				<defaultGoal>gitflow:release</defaultGoal>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -714,6 +713,14 @@
 							</execution>
 						</executions>
 					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>release</id>
+			<build>
+				<defaultGoal>gitflow:release</defaultGoal>
+				<plugins>
 					<plugin>
 						<groupId>org.sonatype.plugins</groupId>
 						<artifactId>nexus-staging-maven-plugin</artifactId>
