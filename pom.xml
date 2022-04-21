@@ -919,7 +919,7 @@
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.8</plugins.org.jacoco.jacoco-maven-plugin>
 		<plugins.org.owasp.dependency-check-maven>7.0.4</plugins.org.owasp.dependency-check-maven>
-		<plugins.sonatype.nexus-staging-maven-plugin>1.6.12</plugins.sonatype.nexus-staging-maven-plugin>
+		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.6.0</version.com.github.spotbugs>
 		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.12.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
