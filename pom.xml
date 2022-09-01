@@ -908,7 +908,7 @@
 		<plugins.maven.maven-site-plugin>3.12.1</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M7</plugins.maven.maven-surefire-plugin>
-		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.maven.maven-toolchains-plugin>3.1.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.maven.maven-wrapper-plugin>3.1.1</plugins.maven.maven-wrapper-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.8</plugins.org.jacoco.jacoco-maven-plugin>
