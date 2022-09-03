@@ -886,7 +886,7 @@
 		<plugins.codehaus.build-helper-maven-plugin>3.3.0</plugins.codehaus.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.11.0</plugins.codehaus.versions-maven-plugin>
 		<plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>1.18.0</plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>
-		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>3.0.1</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
+		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>3.2.0</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
 		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.7.1.1</plugins.com.github.spotbugs.spotbugs-maven-plugin>
 		<plugins.maven.maven-checkstyle-plugin>3.2.0</plugins.maven.maven-checkstyle-plugin>
 		<plugins.maven.maven-clean-plugin>3.2.0</plugins.maven.maven-clean-plugin>
