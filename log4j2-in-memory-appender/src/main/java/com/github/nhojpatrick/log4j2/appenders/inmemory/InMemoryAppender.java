@@ -29,7 +29,7 @@ public class InMemoryAppender
 
     public static final String IN_MEMORY_APPENDER = "InMemoryAppender";
 
-    private List<String> messages = new ArrayList<>();
+    private List<LogStatement> messages = new ArrayList<>();
 
     protected InMemoryAppender(String name,
                                Filter filter,
@@ -41,8 +41,9 @@ public class InMemoryAppender
     public void append(final LogEvent event) {
         final String message = event.getMessage()
                 .getFormattedMessage();
+        final LogStatement logStatement = new LogStatement(message);
         getMessages()
-                .add(message);
+                .add(logStatement);
     }
 
     @SuppressFBWarnings(value = {"UP_UNUSED_PARAMETER"}, justification = "As designed")
@@ -61,13 +62,13 @@ public class InMemoryAppender
     }
 
     @SuppressFBWarnings(value = "EI_EXPOSE_REP", justification = "Accepted will look at changing 'return messages;'")
-    public List<String> getMessages() {
-        return messages;
+    public List<LogStatement> getMessages() {
+        return this.messages;
     }
 
     @SuppressFBWarnings(value = "EI_EXPOSE_REP",
             justification = "Accepted will look at changing 'this.messages = messages;'")
-    public void setMessages(List<String> messages) {
+    public void setMessages(List<LogStatement> messages) {
         this.messages = messages;
     }
 
