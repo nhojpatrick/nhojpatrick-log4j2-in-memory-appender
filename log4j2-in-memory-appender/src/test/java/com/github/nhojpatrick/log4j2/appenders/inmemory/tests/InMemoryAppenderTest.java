@@ -2,6 +2,7 @@ package com.github.nhojpatrick.log4j2.appenders.inmemory.tests;
 
 import com.github.nhojpatrick.log4j2.appenders.inmemory.InMemoryAppender;
 import com.github.nhojpatrick.log4j2.appenders.inmemory.InMemoryAppenderHelper;
+import com.github.nhojpatrick.log4j2.appenders.inmemory.LogStatement;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,10 +25,11 @@ public class InMemoryAppenderTest {
         logger.info("Qwerty 1234567890");
 
         final InMemoryAppender inMemoryAppender = InMemoryAppenderHelper.getAppender();
-        final List<String> messages = inMemoryAppender.getMessages();
+        final List<LogStatement> messages = inMemoryAppender.getMessages();
         System.out.println(messages);
         final Optional<String> message = messages
                 .stream()
+                .map(p -> p.getMessage())
                 .filter(p -> p.contains("Qwerty"))
                 .findFirst();
 
