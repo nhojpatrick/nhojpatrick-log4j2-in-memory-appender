@@ -39,9 +39,11 @@ public class InMemoryAppender
 
     @Override
     public void append(final LogEvent event) {
+        final String level = event.getLevel()
+                .toString();
         final String message = event.getMessage()
                 .getFormattedMessage();
-        final LogStatement logStatement = new LogStatement(message);
+        final LogStatement logStatement = new LogStatement(level, message);
         getMessages()
                 .add(logStatement);
     }
