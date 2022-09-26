@@ -1,4 +1,4 @@
-package com.github.nhojpatrick.log4j2.appenders.inmemory;
+package com.github.nhojpatrick.log4j2.appenders.inmemory2;
 
 public class LogStatement {
 

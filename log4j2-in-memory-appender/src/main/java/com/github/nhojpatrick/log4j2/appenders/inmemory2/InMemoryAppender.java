@@ -1,4 +1,4 @@
-package com.github.nhojpatrick.log4j2.appenders.inmemory;
+package com.github.nhojpatrick.log4j2.appenders.inmemory2;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.apache.logging.log4j.core.Appender;
