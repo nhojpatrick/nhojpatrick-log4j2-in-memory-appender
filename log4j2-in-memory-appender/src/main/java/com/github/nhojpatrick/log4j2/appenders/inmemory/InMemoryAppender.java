@@ -43,7 +43,8 @@ public class InMemoryAppender
                 .toString();
         final String message = event.getMessage()
                 .getFormattedMessage();
-        final LogStatement logStatement = new LogStatement(level, message);
+        final long timeMillis = event.getTimeMillis();
+        final LogStatement logStatement = new LogStatement(level, message, timeMillis);
         getMessages()
                 .add(logStatement);
     }
