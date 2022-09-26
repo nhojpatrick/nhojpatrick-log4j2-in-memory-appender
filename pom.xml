@@ -880,7 +880,7 @@
 	<!--properties / -->
 	<properties>
 		<!-- custom properties -->
-		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory.n/a</project.Automatic-Module-Name>
+		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory2.n/a</project.Automatic-Module-Name>
 		<project.custom.encoding>UTF-8</project.custom.encoding>
 		<project.custom.java.version>1.8</project.custom.java.version>
 		<!-- maven user properties -->

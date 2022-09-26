@@ -71,7 +71,7 @@
 	<!--properties / -->
 	<properties>
 		<!-- custom properties -->
-		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory</project.Automatic-Module-Name>
+		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory2</project.Automatic-Module-Name>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
