@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.nhojpatrick.log4j2.appenders</groupId>
 		<artifactId>nhojpatrick-log4j2-in-memory-appender-parent</artifactId>
-		<version>1.0.5-SNAPSHOT</version>
+		<version>1.0.5</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<!--groupId / -->

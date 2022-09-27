@@ -12,7 +12,7 @@
 	<!--name / -->
 	<name>Log4J In-Memory Appender Parent</name>
 	<!--version / -->
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.5</version>
 	<!--description / -->
 	<description>Log4J In-Memory Appender Parent project</description>
 	<!--url / -->
