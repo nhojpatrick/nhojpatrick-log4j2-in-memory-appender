@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<!--modelVersion / -->
 	<modelVersion>4.0.0</modelVersion>
 	<!--parent / -->
 	<!--groupId / -->
 	<groupId>com.github.nhojpatrick.log4j2.appenders</groupId>
 	<!--artifactId / -->
-	<artifactId>nhojpatrick-log4j2-in-memory-appender</artifactId>
+	<artifactId>nhojpatrick-log4j2-in-memory-appender-parent</artifactId>
 	<!--packaging / -->
+	<packaging>pom</packaging>
 	<!--name / -->
-	<name>Log4J In-Memory Appender</name>
+	<name>Log4J In-Memory Appender Parent</name>
 	<!--version / -->
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<!--description / -->
-	<description>Log4J In-Memory Appender project</description>
+	<description>Log4J In-Memory Appender Parent project</description>
 	<!--url / -->
 	<url>https://github.com/nhojpatrick/nhojpatrick-log4j2-in-memory-appender</url>
 	<!--prerequisites / -->
@@ -53,6 +54,27 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>com.amashchenko.maven.plugin</groupId>
+					<artifactId>gitflow-maven-plugin</artifactId>
+					<version>${plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin}</version>
+					<configuration>
+						<argLine>-Pcicd,deployableArtifacts</argLine>
+						<postReleaseGoals>deploy</postReleaseGoals>
+						<gitFlowConfig>
+							<developmentBranch>develop</developmentBranch>
+							<productionBranch>main</productionBranch>
+							<versionTagPrefix>v</versionTagPrefix>
+						</gitFlowConfig>
+						<gpgSignCommit>true</gpgSignCommit>
+						<gpgSignTag>true</gpgSignTag>
+						<commitMessagePrefix xml:space="preserve">[gitflow] </commitMessagePrefix>
+						<commitMessages>
+							<releaseFinishMessage>Development v@{version}</releaseFinishMessage>
+							<releaseStartMessage>Release v@{version}</releaseStartMessage>
+						</commitMessages>
+					</configuration>
+				</plugin>
+				<plugin>
 					<groupId>com.github.ekryd.sortpom</groupId>
 					<artifactId>sortpom-maven-plugin</artifactId>
 					<version>${plugins.com.github.ekryd.sortpom.sortpom-maven-plugin}</version>
@@ -60,7 +82,7 @@
 						<dependency>
 							<groupId>com.github.nhojpatrick.qa</groupId>
 							<artifactId>nhojpatrick-sortpom-sortorderfile</artifactId>
-							<version>[1.0.0,1.0.999)</version>
+							<version>[1.1.0,1.1.999)</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -73,17 +95,17 @@
 							<plugin>
 								<groupId>com.h3xstream.findsecbugs</groupId>
 								<artifactId>findsecbugs-plugin</artifactId>
-								<version>1.11.0</version>
+								<version>${version.com.h3xstream.findsecbugs.findsecbugs-plugin}</version>
 							</plugin>
 							<plugin>
 								<groupId>com.mebigfatguy.sb-contrib</groupId>
 								<artifactId>sb-contrib</artifactId>
-								<version>7.4.7</version>
+								<version>${version.com.mebigfatguy.sb-contrib.sb-contrib}</version>
 							</plugin>
 							<plugin>
 								<groupId>jp.skypencil.findbugs.slf4j</groupId>
 								<artifactId>bug-pattern</artifactId>
-								<version>1.5.0</version>
+								<version>${version.jp.skypencil.findbugs.slf4j.bug-pattern}</version>
 							</plugin>
 						</plugins>
 					</configuration>
@@ -96,23 +118,20 @@
 					</dependencies>
 				</plugin>
 				<plugin>
-					<groupId>io.takari</groupId>
-					<artifactId>maven</artifactId>
-					<version>${plugins.takari.maven}</version>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-checkstyle-plugin</artifactId>
 					<version>${plugins.maven.maven-checkstyle-plugin}</version>
 					<configuration>
 						<consoleOutput>true</consoleOutput>
-						<failsOnError>true</failsOnError>
+						<failOnViolation>true</failOnViolation>
+						<failsOnError>false</failsOnError>
+						<logViolationsToConsole>true</logViolationsToConsole>
 					</configuration>
 					<dependencies>
 						<dependency>
 							<groupId>com.github.nhojpatrick.qa</groupId>
-							<artifactId>nhojpatrick-checkstyle-rules</artifactId>
-							<version>[1.0.1,1.0.999)</version>
+							<artifactId>nhojpatrick-qa-ruleset-checkstyle</artifactId>
+							<version>[1.1.0,1.1.999)</version>
 						</dependency>
 						<dependency>
 							<groupId>com.puppycrawl.tools</groupId>
@@ -130,6 +149,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>${plugins.maven.maven-compiler-plugin}</version>
+					<configuration>
+						<compilerArgs>
+							<arg>-Xpkginfo:always</arg>
+						</compilerArgs>
+					</configuration>
 					<executions>
 						<execution>
 							<id>java11-main</id>
@@ -143,6 +167,7 @@
 									<version>11</version>
 								</jdkToolchain>
 								<compileSourceRoots>
+									<compileSourceRoot>${project.basedir}/src/main/java</compileSourceRoot>
 									<compileSourceRoot>${project.basedir}/src/main/java11</compileSourceRoot>
 								</compileSourceRoots>
 								<multiReleaseOutput>true</multiReleaseOutput>
@@ -170,7 +195,7 @@
 								<version>[1.8,9),[11,12),[16,)</version>
 							</requireJavaVersion>
 							<requireMavenVersion>
-								<version>[3.8.4]</version>
+								<version>[3.8.6]</version>
 							</requireMavenVersion>
 						</rules>
 					</configuration>
@@ -179,16 +204,20 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
 					<version>${plugins.maven.maven-failsafe-plugin}</version>
-					<configuration>
-						<includes>
-							<include>**/*IT.java</include>
-						</includes>
-					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-gpg-plugin</artifactId>
 					<version>${plugins.maven.maven-gpg-plugin}</version>
+					<configuration>
+						<keyname>${gpg.keyname}</keyname>
+						<passphraseServerId>${gpg.keyname}</passphraseServerId>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-help-plugin</artifactId>
+					<version>${plugins.maven.maven-help-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -225,21 +254,36 @@
 					<version>${plugins.maven.maven-pmd-plugin}</version>
 					<configuration>
 						<rulesets>
-							<ruleset>com/github/nhojpatrick/qa/pmd/ruleset/rules.xml</ruleset>
+							<ruleset>com/github/nhojpatrick/qa/ruleset/pmd/rules.xml</ruleset>
 						</rulesets>
 					</configuration>
 					<dependencies>
 						<dependency>
 							<groupId>com.github.nhojpatrick.qa</groupId>
-							<artifactId>nhojpatrick-pmd-ruleset</artifactId>
-							<version>[1.0.1,1.0.999)</version>
+							<artifactId>nhojpatrick-qa-ruleset-pmd</artifactId>
+							<version>[1.1.0,1.1.999)</version>
 						</dependency>
 					</dependencies>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-remote-resources-plugin</artifactId>
+					<version>${plugins.maven.maven-remote-resources-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-repository-plugin</artifactId>
+					<version>${plugins.maven.maven-repository-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>${plugins.maven.maven-resources-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-plugin</artifactId>
+					<version>${plugins.maven.maven-scm-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -261,7 +305,19 @@
 						</excludes>
 						<forkCount>1</forkCount>
 						<reuseForks>true</reuseForks>
+						<reportFormat>plain</reportFormat>
+						<consoleOutputReporter>
+							<disable>true</disable>
+						</consoleOutputReporter>
+						<statelessTestsetInfoReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoTreeReporter"></statelessTestsetInfoReporter>
 					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>me.fabriciorby</groupId>
+							<artifactId>maven-surefire-junit5-tree-reporter</artifactId>
+							<version>1.1.0</version>
+						</dependency>
+					</dependencies>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -282,6 +338,11 @@
 							</goals>
 						</execution>
 					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-wrapper-plugin</artifactId>
+					<version>${plugins.maven.maven-wrapper-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -317,7 +378,7 @@
 						<dependency>
 							<groupId>com.github.nhojpatrick.qa</groupId>
 							<artifactId>nhojpatrick-versions-ruleset</artifactId>
-							<version>[1.0.0,1.0.999)</version>
+							<version>[1.1.0,1.1.999)</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -385,7 +446,7 @@
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
 					<artifactId>nexus-staging-maven-plugin</artifactId>
-					<version>${plugins.org.sonatype.plugins.nexus-staging-maven-plugin}</version>
+					<version>${plugins.sonatype.nexus-staging-maven-plugin}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -496,6 +557,7 @@
 				</plugins>
 			</build>
 			<properties>
+				<maven.test.skip>true</maven.test.skip>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -534,6 +596,7 @@
 				</plugins>
 			</build>
 			<properties>
+				<maven.test.skip>true</maven.test.skip>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -558,6 +621,7 @@
 				</plugins>
 			</build>
 			<properties>
+				<maven.test.skip>true</maven.test.skip>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -583,6 +647,7 @@
 				</plugins>
 			</build>
 			<properties>
+				<maven.test.skip>true</maven.test.skip>
 				<pmd.verbose>true</pmd.verbose>
 				<sort.skip>true</sort.skip>
 			</properties>
@@ -608,11 +673,12 @@
 				</plugins>
 			</build>
 			<properties>
+				<maven.test.skip>true</maven.test.skip>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
 		<profile>
-			<id>release</id>
+			<id>deployableArtifacts</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -652,6 +718,14 @@
 							</execution>
 						</executions>
 					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>release</id>
+			<build>
+				<defaultGoal>gitflow:release</defaultGoal>
+				<plugins>
 					<plugin>
 						<groupId>org.sonatype.plugins</groupId>
 						<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -665,8 +739,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -718,8 +790,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -729,8 +799,8 @@
 				<defaultGoal>validate</defaultGoal>
 				<plugins>
 					<plugin>
-						<groupId>io.takari</groupId>
-						<artifactId>maven</artifactId>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-wrapper-plugin</artifactId>
 						<executions>
 							<execution>
 								<id>wrapper-latest</id>
@@ -744,45 +814,18 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
+				<includeDebug>true</includeDebug>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
 	</profiles>
 	<!--modules / -->
+	<modules>
+		<module>log4j2-in-memory-appender</module>
+	</modules>
 	<!--repositories / -->
 	<!--pluginRepositories / -->
 	<!--dependencies / -->
-	<dependencies>
-		<dependency>
-			<groupId>com.github.spotbugs</groupId>
-			<artifactId>spotbugs-annotations</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-	</dependencies>
 	<!--reports (Deprecated) / -->
 	<!--reporting / -->
 	<!--dependencyManagement / -->
@@ -827,7 +870,7 @@
 	<distributionManagement>
 		<repository>
 			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 		</repository>
 		<snapshotRepository>
 			<id>ossrh</id>
@@ -837,53 +880,62 @@
 	<!--properties / -->
 	<properties>
 		<!-- custom properties -->
-		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory</project.Automatic-Module-Name>
+		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory.n/a</project.Automatic-Module-Name>
 		<project.custom.encoding>UTF-8</project.custom.encoding>
 		<project.custom.java.version>1.8</project.custom.java.version>
 		<!-- maven user properties -->
+		<downloadJavadocs>true</downloadJavadocs>
+		<downloadSources>true</downloadSources>
 		<generateBackupPoms>false</generateBackupPoms>
 		<maven.compiler.source>${project.custom.java.version}</maven.compiler.source>
 		<maven.compiler.target>${project.custom.java.version}</maven.compiler.target>
-		<maven.deploy.skip>false</maven.deploy.skip>
-		<maven.install.skip>false</maven.install.skip>
 		<maven.test.failure.ignore>false</maven.test.failure.ignore>
 		<project.build.outputEncoding>${project.custom.encoding}</project.build.outputEncoding>
 		<project.build.sourceEncoding>${project.custom.encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
+		<surefire.runOrder>random</surefire.runOrder>
 		<!-- plugin versions -->
-		<plugins.codehaus.build-helper-maven-plugin>3.2.0</plugins.codehaus.build-helper-maven-plugin>
-		<plugins.codehaus.versions-maven-plugin>2.8.1</plugins.codehaus.versions-maven-plugin>
+		<plugins.codehaus.build-helper-maven-plugin>3.3.0</plugins.codehaus.build-helper-maven-plugin>
+		<plugins.codehaus.versions-maven-plugin>2.12.0</plugins.codehaus.versions-maven-plugin>
+		<plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>1.18.0</plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>
 		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>3.0.1</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
-		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.5.2.0</plugins.com.github.spotbugs.spotbugs-maven-plugin>
-		<plugins.maven.maven-checkstyle-plugin>3.1.2</plugins.maven.maven-checkstyle-plugin>
-		<plugins.maven.maven-clean-plugin>3.1.0</plugins.maven.maven-clean-plugin>
-		<plugins.maven.maven-compiler-plugin>3.8.1</plugins.maven.maven-compiler-plugin>
-		<plugins.maven.maven-dependency-plugin>3.2.0</plugins.maven.maven-dependency-plugin>
-		<plugins.maven.maven-deploy-plugin>3.0.0-M1</plugins.maven.maven-deploy-plugin>
-		<plugins.maven.maven-enforcer-plugin>3.0.0</plugins.maven.maven-enforcer-plugin>
-		<plugins.maven.maven-failsafe-plugin>3.0.0-M5</plugins.maven.maven-failsafe-plugin>
+		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.7.2.0</plugins.com.github.spotbugs.spotbugs-maven-plugin>
+		<plugins.maven.maven-checkstyle-plugin>3.2.0</plugins.maven.maven-checkstyle-plugin>
+		<plugins.maven.maven-clean-plugin>3.2.0</plugins.maven.maven-clean-plugin>
+		<plugins.maven.maven-compiler-plugin>3.10.1</plugins.maven.maven-compiler-plugin>
+		<plugins.maven.maven-dependency-plugin>3.3.0</plugins.maven.maven-dependency-plugin>
+		<plugins.maven.maven-deploy-plugin>3.0.0</plugins.maven.maven-deploy-plugin>
+		<plugins.maven.maven-enforcer-plugin>3.1.0</plugins.maven.maven-enforcer-plugin>
+		<plugins.maven.maven-failsafe-plugin>3.0.0-M7</plugins.maven.maven-failsafe-plugin>
 		<plugins.maven.maven-gpg-plugin>3.0.1</plugins.maven.maven-gpg-plugin>
-		<plugins.maven.maven-install-plugin>3.0.0-M1</plugins.maven.maven-install-plugin>
-		<plugins.maven.maven-jar-plugin>3.2.0</plugins.maven.maven-jar-plugin>
-		<plugins.maven.maven-javadoc-plugin>3.3.1</plugins.maven.maven-javadoc-plugin>
-		<plugins.maven.maven-pmd-plugin>3.15.0</plugins.maven.maven-pmd-plugin>
-		<plugins.maven.maven-resources-plugin>3.2.0</plugins.maven.maven-resources-plugin>
-		<plugins.maven.maven-site-plugin>3.10.0</plugins.maven.maven-site-plugin>
+		<plugins.maven.maven-help-plugin>3.3.0</plugins.maven.maven-help-plugin>
+		<plugins.maven.maven-install-plugin>3.0.1</plugins.maven.maven-install-plugin>
+		<plugins.maven.maven-jar-plugin>3.3.0</plugins.maven.maven-jar-plugin>
+		<plugins.maven.maven-javadoc-plugin>3.4.1</plugins.maven.maven-javadoc-plugin>
+		<plugins.maven.maven-pmd-plugin>3.19.0</plugins.maven.maven-pmd-plugin>
+		<plugins.maven.maven-remote-resources-plugin>3.0.0</plugins.maven.maven-remote-resources-plugin>
+		<plugins.maven.maven-repository-plugin>2.4</plugins.maven.maven-repository-plugin>
+		<plugins.maven.maven-resources-plugin>3.3.0</plugins.maven.maven-resources-plugin>
+		<plugins.maven.maven-scm-plugin>1.13.0</plugins.maven.maven-scm-plugin>
+		<plugins.maven.maven-site-plugin>3.12.1</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
-		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
-		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.maven.maven-surefire-plugin>3.0.0-M7</plugins.maven.maven-surefire-plugin>
+		<plugins.maven.maven-toolchains-plugin>3.1.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.maven.maven-wrapper-plugin>3.1.1</plugins.maven.maven-wrapper-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
-		<plugins.org.jacoco.jacoco-maven-plugin>0.8.7</plugins.org.jacoco.jacoco-maven-plugin>
-		<plugins.org.owasp.dependency-check-maven>6.5.1</plugins.org.owasp.dependency-check-maven>
-		<plugins.org.sonatype.plugins.nexus-staging-maven-plugin>1.6.8</plugins.org.sonatype.plugins.nexus-staging-maven-plugin>
-		<plugins.takari.maven>0.7.7</plugins.takari.maven>
+		<plugins.org.jacoco.jacoco-maven-plugin>0.8.8</plugins.org.jacoco.jacoco-maven-plugin>
+		<plugins.org.owasp.dependency-check-maven>7.2.1</plugins.org.owasp.dependency-check-maven>
+		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
 		<!-- dependency versions -->
-		<version.com.github.spotbugs>4.5.2</version.com.github.spotbugs>
-		<version.com.puppycrawl.tools.checkstyle>9.2.1</version.com.puppycrawl.tools.checkstyle>
-		<version.org.apache.logging.log4j>2.17.1</version.org.apache.logging.log4j>
+		<version.com.github.spotbugs>4.7.2</version.com.github.spotbugs>
+		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.12.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
+		<version.com.mebigfatguy.sb-contrib.sb-contrib>7.4.7</version.com.mebigfatguy.sb-contrib.sb-contrib>
+		<version.com.puppycrawl.tools.checkstyle>10.3.4</version.com.puppycrawl.tools.checkstyle>
+		<version.jp.skypencil.findbugs.slf4j.bug-pattern>1.5.0</version.jp.skypencil.findbugs.slf4j.bug-pattern>
+		<version.org.apache.logging.log4j>2.18.0</version.org.apache.logging.log4j>
 		<version.org.hamcrest>2.2</version.org.hamcrest>
-		<version.org.junit>5.8.2</version.org.junit>
-		<version.org.slf4j>1.7.32</version.org.slf4j>
+		<version.org.junit>5.9.1</version.org.junit>
+		<version.org.slf4j>1.7.36</version.org.slf4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
@@ -891,8 +943,8 @@
 		<pmd.maxAllowedViolations>0</pmd.maxAllowedViolations>
 		<spotbugs.maxAllowedViolations>0</spotbugs.maxAllowedViolations>
 		<!-- checkstyle -->
-		<checkstyle.config.location>com/github/nhojpatrick/qa/checkstyle/rules/rules.xml</checkstyle.config.location>
-		<!-- sortpom -->
+		<checkstyle.config.location>com/github/nhojpatrick/qa/ruleset/checkstyle/rules.xml</checkstyle.config.location>
+		<!-- sortpom-maven-plugin -->
 		<sort.createBackupFile>false</sort.createBackupFile>
 		<sort.nrOfIndentSpace>-1</sort.nrOfIndentSpace>
 		<sort.pomFile>pom.xml</sort.pomFile>
@@ -902,7 +954,7 @@
 		<sort.sortPlugins>groupId,artifactId,version,scope</sort.sortPlugins>
 		<sort.sortProperties>false</sort.sortProperties>
 		<!-- versions-maven-plugin -->
-		<maven.version.rules>classpath:///com/github/nhojpatrick/qa/versions/rules/rules.xml</maven.version.rules>
+		<maven.version.rules>classpath:///com/github/nhojpatrick/qa/versions/ruleset/rules.xml</maven.version.rules>
 		<!-- JPMS -->
 		<toolchain.vendor>openjdk</toolchain.vendor>
 		<base.java.version>1.8</base.java.version>

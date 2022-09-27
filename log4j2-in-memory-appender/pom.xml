@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!--modelVersion / -->
+	<modelVersion>4.0.0</modelVersion>
+	<!--parent / -->
+	<parent>
+		<groupId>com.github.nhojpatrick.log4j2.appenders</groupId>
+		<artifactId>nhojpatrick-log4j2-in-memory-appender-parent</artifactId>
+		<version>1.0.5</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<!--groupId / -->
+	<!--artifactId / -->
+	<artifactId>nhojpatrick-log4j2-in-memory-appender</artifactId>
+	<!--packaging / -->
+	<!--name / -->
+	<name>Log4J In-Memory Appender</name>
+	<!--version / -->
+	<!--description / -->
+	<description>Log4J In-Memory Appender project</description>
+	<!--url / -->
+	<!--prerequisites / -->
+	<!--issueManagement / -->
+	<!--ciManagement / -->
+	<!--inceptionYear / -->
+	<!--mailingLists / -->
+	<!--developers / -->
+	<!--contributors / -->
+	<!--licenses / -->
+	<!--scm / -->
+	<!--organization / -->
+	<!--build / -->
+	<!--profiles / -->
+	<!--modules / -->
+	<!--repositories / -->
+	<!--pluginRepositories / -->
+	<!--dependencies / -->
+	<dependencies>
+		<dependency>
+			<groupId>com.github.spotbugs</groupId>
+			<artifactId>spotbugs-annotations</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+	</dependencies>
+	<!--reports (Deprecated) / -->
+	<!--reporting / -->
+	<!--dependencyManagement / -->
+	<!--distributionManagement / -->
+	<!--properties / -->
+	<properties>
+		<!-- custom properties -->
+		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory</project.Automatic-Module-Name>
+		<!-- qa user properties -->
+		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
+		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>
+		<jacoco.bundle.line.coveredratio>100%</jacoco.bundle.line.coveredratio>
+		<pmd.maxAllowedViolations>0</pmd.maxAllowedViolations>
+		<spotbugs.maxAllowedViolations>0</spotbugs.maxAllowedViolations>
+	</properties>
+</project>
