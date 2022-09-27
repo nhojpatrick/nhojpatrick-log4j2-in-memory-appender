@@ -503,7 +503,7 @@
 						<artifactId>build-helper-maven-plugin</artifactId>
 						<executions>
 							<execution>
-								<id>add-source-java11</id>
+								<id>add-source-java11-main</id>
 								<phase>generate-sources</phase>
 								<goals>
 									<goal>add-source</goal>
@@ -515,7 +515,7 @@
 								</configuration>
 							</execution>
 							<execution>
-								<id>add-test-source-java11</id>
+								<id>add-source-java11-test</id>
 								<phase>generate-test-sources</phase>
 								<goals>
 									<goal>add-test-source</goal>
