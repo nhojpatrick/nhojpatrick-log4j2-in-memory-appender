@@ -169,54 +169,54 @@ commands:
     steps:
       - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_<< parameters.stepName >> -DskipTests verify
 
-  cache_restore:
-    parameters:
-      cacheAlphaName:
-        type: string
-      cacheBravoName:
-        type: string
-    description: "Save Cache Step << parameters.cacheAlphaName >> << parameters.cacheBravoName >>"
-    steps:
-      - restore_cache:
-          keys:
-            - m2-wrapper-{{ checksum ".mvn/wrapper/maven-wrapper.properties" }}
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheAlphaName >>
-            - m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheBravoName >>
-            - m2-dependencies-{{ checksum "pom.xml" }}
-      - run: mkdir -p ~/.m2/repository
-      - run:
-          name: "Tidy Local Maven Repo of lastUpdated"
-          command: find ~/.m2/repository/ -name "*.lastUpdated" | xargs -ixxx dirname xxx | sort -u | xargs -ixxx rm -rfv xxx
-          when: always
+  #cache_restore:
+  #  parameters:
+  #    cacheAlphaName:
+  #      type: string
+  #    cacheBravoName:
+  #      type: string
+  #  description: "Save Cache Step << parameters.cacheAlphaName >> << parameters.cacheBravoName >>"
+  #  steps:
+  #    - restore_cache:
+  #        keys:
+  #          - m2-wrapper-{{ checksum ".mvn/wrapper/maven-wrapper.properties" }}
+  #    - restore_cache:
+  #        keys:
+  #          - m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheAlphaName >>
+  #          - m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheBravoName >>
+  #          - m2-dependencies-{{ checksum "pom.xml" }}
+  #    - run: mkdir -p ~/.m2/repository
+  #    - run:
+  #        name: "Tidy Local Maven Repo of lastUpdated"
+  #        command: find ~/.m2/repository/ -name "*.lastUpdated" | xargs -ixxx dirname xxx | sort -u | xargs -ixxx rm -rfv xxx
+  #        when: always
 
-  cache_save:
-    parameters:
-      cacheSaveName:
-        type: string
-    description: "Save Cache Step << parameters.cacheSaveName >>"
-    steps:
-      - run: mkdir -p ~/.m2/wrapper
-      - save_cache:
-          key: m2-wrapper-{{ checksum ".mvn/wrapper/maven-wrapper.properties" }}
-          paths:
-            - ~/.m2/wrapper
-          when: always
-      - run: mkdir -p ~/.m2/repository
-      - run:
-          name: "Tidy Local Maven Repo of project before save cache"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick/
-          when: always
-      - run:
-          name: "Tidy Local Maven Repo of lastUpdated"
-          command: find ~/.m2/repository/ -name "*.lastUpdated" | xargs -ixxx dirname xxx | sort -u | xargs -ixxx rm -rfv xxx
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheSaveName >>
-          paths:
-            - ~/.m2/repository
-          when: always
+  #cache_save:
+  #  parameters:
+  #    cacheSaveName:
+  #      type: string
+  #  description: "Save Cache Step << parameters.cacheSaveName >>"
+  #  steps:
+  #    - run: mkdir -p ~/.m2/wrapper
+  #    - save_cache:
+  #        key: m2-wrapper-{{ checksum ".mvn/wrapper/maven-wrapper.properties" }}
+  #        paths:
+  #          - ~/.m2/wrapper
+  #        when: always
+  #    - run: mkdir -p ~/.m2/repository
+  #    - run:
+  #        name: "Tidy Local Maven Repo of project before save cache"
+  #        command: rm -rf ~/.m2/repository/com/github/nhojpatrick/
+  #        when: always
+  #    - run:
+  #        name: "Tidy Local Maven Repo of lastUpdated"
+  #        command: find ~/.m2/repository/ -name "*.lastUpdated" | xargs -ixxx dirname xxx | sort -u | xargs -ixxx rm -rfv xxx
+  #        when: always
+  #    - save_cache:
+  #        key: m2-dependencies-{{ checksum "pom.xml" }}-<< parameters.cacheSaveName >>
+  #        paths:
+  #          - ~/.m2/repository
+  #        when: always
 
 jobs:
   passed_builds:
@@ -241,12 +241,12 @@ jobs:
       - install_openjdk_11
       - setup_std_toolchain
       - checkout
-      - cache_restore:
-          cacheAlphaName: jdk8
-          cacheBravoName: jdk8
+      #- cache_restore:
+      #    cacheAlphaName: jdk8
+      #    cacheBravoName: jdk8
       - std_mvnw_jdk8
-      - cache_save:
-          cacheSaveName: jdk8
+      #- cache_save:
+      #    cacheSaveName: jdk8
 
   jdk8_tests_jdk11:
     docker:
@@ -256,12 +256,12 @@ jobs:
       - install_openjdk_11
       - setup_std_toolchain
       - checkout
-      - cache_restore:
-          cacheAlphaName: jdk8
-          cacheBravoName: jdk8
+      #- cache_restore:
+      #    cacheAlphaName: jdk8
+      #    cacheBravoName: jdk8
       - mvnw_jdk8_tests_jdk11
-      - cache_save:
-          cacheSaveName: jdk8
+      #- cache_save:
+      #    cacheSaveName: jdk8
 
   jdk11:
     docker:
@@ -270,12 +270,12 @@ jobs:
     steps:
       - setup_openjdk_11_toolchain
       - checkout
-      - cache_restore:
-          cacheAlphaName: jdk11
-          cacheBravoName: jdk11
+      #- cache_restore:
+      #    cacheAlphaName: jdk11
+      #    cacheBravoName: jdk11
       - std_mvnw_jdk11
-      - cache_save:
-          cacheSaveName: jdk11
+      #- cache_save:
+      #    cacheSaveName: jdk11
 
   jdk17:
     docker:
@@ -284,12 +284,12 @@ jobs:
     steps:
       - setup_openjdk_17_toolchain
       - checkout
-      - cache_restore:
-          cacheAlphaName: jdk17
-          cacheBravoName: jdk17
+      #- cache_restore:
+      #    cacheAlphaName: jdk17
+      #    cacheBravoName: jdk17
       - std_mvnw_jdk17
-      - cache_save:
-          cacheSaveName: jdk17
+      #- cache_save:
+      #    cacheSaveName: jdk17
 
   qa_matrix:
     parameters:
@@ -304,13 +304,13 @@ jobs:
       - install_openjdk_11
       - setup_std_toolchain
       - checkout
-      - cache_restore:
-          cacheAlphaName: << parameters.qa_step_profile >>
-          cacheBravoName: jdk8
+      #- cache_restore:
+      #    cacheAlphaName: << parameters.qa_step_profile >>
+      #    cacheBravoName: jdk8
       - qa_step:
           stepName: << parameters.qa_step_profile >>
-      - cache_save:
-          cacheSaveName: << parameters.qa_step_profile >>
+      #- cache_save:
+      #    cacheSaveName: << parameters.qa_step_profile >>
 
   qa_owasp_dependency_check:
     docker:
@@ -320,9 +320,9 @@ jobs:
       - install_openjdk_11
       - setup_std_toolchain
       - checkout
-      - cache_restore:
-          cacheAlphaName: owasp-dependency-check
-          cacheBravoName: jdk8
+      #- cache_restore:
+      #    cacheAlphaName: owasp-dependency-check
+      #    cacheBravoName: jdk8
       - run: date +"%Y_%V" | tee .YEAR_WEEK
       - restore_cache:
           keys:
@@ -334,8 +334,8 @@ jobs:
       - run:
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_owasp-dependency-check -DskipTests verify -DdataDirectory=~/.m2/owasp-dependency-check-data
           no_output_timeout: 30m
-      - cache_save:
-          cacheSaveName: owasp-dependency-check
+      #- cache_save:
+      #    cacheSaveName: owasp-dependency-check
       - save_cache:
           key: m2-owasp-dependency-check-data-{{ checksum ".YEAR_WEEK" }}
           paths:
