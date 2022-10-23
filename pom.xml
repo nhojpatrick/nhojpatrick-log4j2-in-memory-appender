@@ -896,7 +896,7 @@
 		<surefire.runOrder>random</surefire.runOrder>
 		<!-- plugin versions -->
 		<plugins.codehaus.build-helper-maven-plugin>3.3.0</plugins.codehaus.build-helper-maven-plugin>
-		<plugins.codehaus.versions-maven-plugin>2.12.0</plugins.codehaus.versions-maven-plugin>
+		<plugins.codehaus.versions-maven-plugin>2.13.0</plugins.codehaus.versions-maven-plugin>
 		<plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>1.19.0</plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>
 		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>3.0.1</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
 		<plugins.com.github.spotbugs.spotbugs-maven-plugin>4.7.2.1</plugins.com.github.spotbugs.spotbugs-maven-plugin>
