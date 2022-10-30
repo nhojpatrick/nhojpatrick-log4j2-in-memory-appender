@@ -78,7 +78,7 @@ commands:
                 <id>openjdk-11</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-11.0.16</jdkHome>
+                <jdkHome>/usr/local/jdk-11.0.17</jdkHome>
               </configuration>
             </toolchain>
           </toolchains>
@@ -111,7 +111,7 @@ commands:
                 <id>openjdk-11</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-17.0.4</jdkHome>
+                <jdkHome>/usr/local/jdk-17.0.5</jdkHome>
               </configuration>
             </toolchain>
           </toolchains>
