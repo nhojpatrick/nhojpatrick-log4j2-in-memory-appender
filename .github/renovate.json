@@ -1,12 +1,12 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":disableRateLimiting"
   ],
   "dependencyDashboard": true,
   "excludeCommitPaths": ["relocation/**"],
   "labels": ["dependencies"],
   "assignees" : ["nhojpatrick"],
-  "prHourlyLimit": 0,
   "separateMinorPatch": true,
   "separateMultipleMajor": true,
   "circleci": {"enabled": false},
