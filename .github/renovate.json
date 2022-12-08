@@ -1,14 +1,14 @@
 {
   "extends": [
     "config:base",
+    ":dependencyDashboard",
     ":disableRateLimiting",
-    ":separateMultipleMajorReleases"
+    ":separateMultipleMajorReleases",
+    ":separatePatchReleases"
   ],
-  "dependencyDashboard": true,
   "excludeCommitPaths": ["relocation/**"],
   "labels": ["dependencies"],
   "assignees" : ["nhojpatrick"],
-  "separateMinorPatch": true,
   "circleci": {"enabled": false},
   "docker": {"enabled": false},
   "docker-compose": {"enabled": false}
