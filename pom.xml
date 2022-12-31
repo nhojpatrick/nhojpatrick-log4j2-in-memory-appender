@@ -924,7 +924,7 @@
 		<plugins.maven.maven-wrapper-plugin>3.1.1</plugins.maven.maven-wrapper-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.8</plugins.org.jacoco.jacoco-maven-plugin>
-		<plugins.org.owasp.dependency-check-maven>7.4.2</plugins.org.owasp.dependency-check-maven>
+		<plugins.org.owasp.dependency-check-maven>7.4.3</plugins.org.owasp.dependency-check-maven>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.7.3</version.com.github.spotbugs>
