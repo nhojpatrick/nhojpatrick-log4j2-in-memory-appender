@@ -111,7 +111,7 @@ commands:
                 <id>openjdk-11</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-17.0.5</jdkHome>
+                <jdkHome>/usr/local/jdk-17.0.6</jdkHome>
               </configuration>
             </toolchain>
           </toolchains>
