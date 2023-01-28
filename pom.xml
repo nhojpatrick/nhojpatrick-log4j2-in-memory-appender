@@ -949,6 +949,7 @@
 		<checkstyle.config.location>com/github/nhojpatrick/qa/ruleset/checkstyle/rules.xml</checkstyle.config.location>
 		<!-- sortpom-maven-plugin -->
 		<sort.createBackupFile>false</sort.createBackupFile>
+		<sort.encoding>${project.custom.encoding}</sort.encoding>
 		<sort.nrOfIndentSpace>-1</sort.nrOfIndentSpace>
 		<sort.pomFile>pom.xml</sort.pomFile>
 		<sort.sortDependencies>groupId,artifactId,version,scope</sort.sortDependencies>
