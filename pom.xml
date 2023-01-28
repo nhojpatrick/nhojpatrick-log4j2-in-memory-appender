@@ -796,31 +796,6 @@
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
-		<profile>
-			<id>wrapper</id>
-			<build>
-				<defaultGoal>validate</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-wrapper-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>wrapper-latest</id>
-								<phase>validate</phase>
-								<goals>
-									<goal>wrapper</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-			<properties>
-				<includeDebug>true</includeDebug>
-				<sort.skip>true</sort.skip>
-			</properties>
-		</profile>
 	</profiles>
 	<!--modules / -->
 	<modules>
