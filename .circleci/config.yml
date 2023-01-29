@@ -388,6 +388,7 @@ workflows:
                 "checkstyle",
                 "javadoc",
                 "pmd",
+                "sortpom",
                 "spotbugs"
               ]
               qa_step_jdk: [
@@ -400,6 +401,8 @@ workflows:
               - qa_step_profile: "javadoc"
                 qa_step_jdk: "11.0"
               - qa_step_profile: "pmd"
+                qa_step_jdk: "11.0"
+              - qa_step_profile: "sortpom"
                 qa_step_jdk: "11.0"
               - qa_step_profile: "spotbugs"
                 qa_step_jdk: "11.0"
