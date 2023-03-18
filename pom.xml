@@ -886,7 +886,7 @@
 		<plugins.maven.maven-enforcer-plugin>3.2.1</plugins.maven.maven-enforcer-plugin>
 		<plugins.maven.maven-failsafe-plugin>3.0.0</plugins.maven.maven-failsafe-plugin>
 		<plugins.maven.maven-gpg-plugin>3.0.1</plugins.maven.maven-gpg-plugin>
-		<plugins.maven.maven-help-plugin>3.3.0</plugins.maven.maven-help-plugin>
+		<plugins.maven.maven-help-plugin>3.4.0</plugins.maven.maven-help-plugin>
 		<plugins.maven.maven-install-plugin>3.1.0</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-jar-plugin>3.3.0</plugins.maven.maven-jar-plugin>
 		<plugins.maven.maven-javadoc-plugin>3.5.0</plugins.maven.maven-javadoc-plugin>
