@@ -11,5 +11,6 @@
   "assignees" : ["nhojpatrick"],
   "circleci": {"enabled": false},
   "docker": {"enabled": false},
-  "docker-compose": {"enabled": false}
+  "docker-compose": {"enabled": false},
+  "rebaseWhen": "never"
 }
