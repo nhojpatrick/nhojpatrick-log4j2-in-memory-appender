@@ -315,7 +315,7 @@
 						<dependency>
 							<groupId>me.fabriciorby</groupId>
 							<artifactId>maven-surefire-junit5-tree-reporter</artifactId>
-							<version>1.1.0</version>
+							<version>${plugins.maven-surefire-junit5-tree-reporter}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -899,6 +899,7 @@
 		<plugins.maven.maven-surefire-plugin>3.1.0</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.1.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.maven.maven-wrapper-plugin>3.2.0</plugins.maven.maven-wrapper-plugin>
+		<plugins.maven-surefire-junit5-tree-reporter>1.2.0</plugins.maven-surefire-junit5-tree-reporter>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.10</plugins.org.jacoco.jacoco-maven-plugin>
 		<plugins.owasp-dependency-check-maven>8.2.1</plugins.owasp-dependency-check-maven>
