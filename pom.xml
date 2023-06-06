@@ -56,7 +56,7 @@
 				<plugin>
 					<groupId>com.amashchenko.maven.plugin</groupId>
 					<artifactId>gitflow-maven-plugin</artifactId>
-					<version>${plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin}</version>
+					<version>${plugins.gitflow-maven-plugin}</version>
 					<configuration>
 						<argLine>-Pcicd,deployableArtifacts</argLine>
 						<postReleaseGoals>deploy</postReleaseGoals>
@@ -875,8 +875,8 @@
 		<!-- plugin versions -->
 		<plugins.codehaus.build-helper-maven-plugin>3.4.0</plugins.codehaus.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.16.0</plugins.codehaus.versions-maven-plugin>
-		<plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>1.20.0</plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
+		<plugins.gitflow-maven-plugin>1.20.0</plugins.gitflow-maven-plugin>
 		<plugins.maven.maven-checkstyle-plugin>3.3.0</plugins.maven.maven-checkstyle-plugin>
 		<plugins.maven.maven-clean-plugin>3.2.0</plugins.maven.maven-clean-plugin>
 		<plugins.maven.maven-compiler-plugin>3.11.0</plugins.maven.maven-compiler-plugin>
