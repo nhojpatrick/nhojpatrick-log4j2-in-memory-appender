@@ -883,7 +883,7 @@
 		<plugins.maven.maven-dependency-plugin>3.6.0</plugins.maven.maven-dependency-plugin>
 		<plugins.maven.maven-deploy-plugin>3.1.1</plugins.maven.maven-deploy-plugin>
 		<plugins.maven.maven-enforcer-plugin>3.3.0</plugins.maven.maven-enforcer-plugin>
-		<plugins.maven.maven-failsafe-plugin>3.1.0</plugins.maven.maven-failsafe-plugin>
+		<plugins.maven.maven-failsafe-plugin>3.1.2</plugins.maven.maven-failsafe-plugin>
 		<plugins.maven.maven-gpg-plugin>3.1.0</plugins.maven.maven-gpg-plugin>
 		<plugins.maven.maven-help-plugin>3.4.0</plugins.maven.maven-help-plugin>
 		<plugins.maven.maven-install-plugin>3.1.1</plugins.maven.maven-install-plugin>
