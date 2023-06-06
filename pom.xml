@@ -298,7 +298,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>${plugins.maven.maven-surefire-plugin}</version>
+					<version>${plugins.maven-surefire-plugin}</version>
 					<configuration>
 						<excludes>
 							<exclude>**/*IT.java</exclude>
@@ -877,6 +877,7 @@
 		<plugins.codehaus.versions-maven-plugin>2.16.0</plugins.codehaus.versions-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.20.0</plugins.gitflow-maven-plugin>
+		<plugins.maven-surefire-plugin>3.1.2</plugins.maven-surefire-plugin>
 		<plugins.maven.maven-checkstyle-plugin>3.3.0</plugins.maven.maven-checkstyle-plugin>
 		<plugins.maven.maven-clean-plugin>3.2.0</plugins.maven.maven-clean-plugin>
 		<plugins.maven.maven-compiler-plugin>3.11.0</plugins.maven.maven-compiler-plugin>
@@ -896,7 +897,6 @@
 		<plugins.maven.maven-scm-plugin>2.0.1</plugins.maven.maven-scm-plugin>
 		<plugins.maven.maven-site-plugin>3.12.1</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.3.0</plugins.maven.maven-source-plugin>
-		<plugins.maven.maven-surefire-plugin>3.1.2</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.1.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.maven.maven-wrapper-plugin>3.2.0</plugins.maven.maven-wrapper-plugin>
 		<plugins.maven-surefire-junit5-tree-reporter>1.2.1</plugins.maven-surefire-junit5-tree-reporter>
