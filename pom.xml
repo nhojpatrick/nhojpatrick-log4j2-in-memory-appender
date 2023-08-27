@@ -383,6 +383,29 @@
 					</dependencies>
 				</plugin>
 				<plugin>
+					<groupId>org.cyclonedx</groupId>
+					<artifactId>cyclonedx-maven-plugin</artifactId>
+					<version>${plugins.cyclonedx-maven-plugin}</version>
+					<configuration>
+						<projectType>library</projectType>
+						<schemaVersion>1.4</schemaVersion>
+						<includeBomSerialNumber>true</includeBomSerialNumber>
+						<includeCompileScope>true</includeCompileScope>
+						<includeProvidedScope>true</includeProvidedScope>
+						<includeRuntimeScope>true</includeRuntimeScope>
+						<includeSystemScope>true</includeSystemScope>
+						<includeTestScope>false</includeTestScope>
+						<includeLicenseText>false</includeLicenseText>
+						<outputReactorProjects>true</outputReactorProjects>
+						<outputFormat>json</outputFormat>
+						<outputName>bom</outputName>
+						<outputDirectory>${project.basedir}</outputDirectory>
+						<!-- usually target, if not redefined in pom.xml -->
+						<verbose>false</verbose>
+						<!-- = ${cyclonedx.verbose} -->
+					</configuration>
+				</plugin>
+				<plugin>
 					<groupId>org.eluder.coveralls</groupId>
 					<artifactId>coveralls-maven-plugin</artifactId>
 					<version>${plugins.org.eluder.coveralls.coveralls-maven-plugin}</version>
@@ -743,6 +766,28 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>sbom</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.cyclonedx</groupId>
+						<artifactId>cyclonedx-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>makeAggregateBom</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<sort.skip>true</sort.skip>
+			</properties>
+		</profile>
+		<profile>
 			<id>sortpom</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -875,6 +920,7 @@
 		<!-- plugin versions -->
 		<plugins.codehaus.build-helper-maven-plugin>3.4.0</plugins.codehaus.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.16.0</plugins.codehaus.versions-maven-plugin>
+		<plugins.cyclonedx-maven-plugin>2.7.9</plugins.cyclonedx-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.20.0</plugins.gitflow-maven-plugin>
 		<plugins.maven-clean-plugin>3.3.1</plugins.maven-clean-plugin>
