@@ -920,7 +920,7 @@
 		<!-- plugin versions -->
 		<plugins.codehaus.build-helper-maven-plugin>3.4.0</plugins.codehaus.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.16.1</plugins.codehaus.versions-maven-plugin>
-		<plugins.cyclonedx-maven-plugin>2.7.9</plugins.cyclonedx-maven-plugin>
+		<plugins.cyclonedx-maven-plugin>2.7.10</plugins.cyclonedx-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.20.0</plugins.gitflow-maven-plugin>
 		<plugins.maven-clean-plugin>3.3.2</plugins.maven-clean-plugin>
