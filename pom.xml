@@ -950,7 +950,7 @@
 		<plugins.org.jacoco.jacoco-maven-plugin>0.8.11</plugins.org.jacoco.jacoco-maven-plugin>
 		<plugins.owasp-dependency-check-maven>8.4.2</plugins.owasp-dependency-check-maven>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
-		<plugins.spotbugs-maven-plugin>4.7.3.6</plugins.spotbugs-maven-plugin>
+		<plugins.spotbugs-maven-plugin>4.8.1.0</plugins.spotbugs-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.8.1</version.com.github.spotbugs>
 		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.12.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
