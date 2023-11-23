@@ -327,6 +327,7 @@ jobs:
       - restore_cache:
           keys:
             - m2-owasp-dependency-check-data-{{ checksum ".YEAR_WEEK" }}
+            - m2-owasp-dependency-check-data-
       - run: mkdir -p ~/.m2/owasp-dependency-check-data
       - run:
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd -N org.owasp:dependency-check-maven:update-only -DdataDirectory=~/.m2/owasp-dependency-check-data
