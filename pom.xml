@@ -918,7 +918,7 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<surefire.runOrder>random</surefire.runOrder>
 		<!-- plugin versions -->
-		<plugins.codehaus.build-helper-maven-plugin>3.4.0</plugins.codehaus.build-helper-maven-plugin>
+		<plugins.codehaus.build-helper-maven-plugin>3.5.0</plugins.codehaus.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.16.2</plugins.codehaus.versions-maven-plugin>
 		<plugins.cyclonedx-maven-plugin>2.7.10</plugins.cyclonedx-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
