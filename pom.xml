@@ -188,7 +188,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>${plugins.maven.maven-enforcer-plugin}</version>
+					<version>${plugins.maven-enforcer-plugin}</version>
 					<configuration>
 						<rules>
 							<requireJavaVersion>
@@ -926,13 +926,13 @@
 		<plugins.maven-clean-plugin>3.3.2</plugins.maven-clean-plugin>
 		<plugins.maven-compiler-plugin>3.11.0</plugins.maven-compiler-plugin>
 		<plugins.maven-deploy-plugin>3.1.1</plugins.maven-deploy-plugin>
+		<plugins.maven-enforcer-plugin>3.4.1</plugins.maven-enforcer-plugin>
 		<plugins.maven-failsafe-plugin>3.2.3</plugins.maven-failsafe-plugin>
 		<plugins.maven-install-plugin>3.1.1</plugins.maven-install-plugin>
 		<plugins.maven-jar-plugin>3.3.0</plugins.maven-jar-plugin>
 		<plugins.maven-surefire-plugin>3.2.3</plugins.maven-surefire-plugin>
 		<plugins.maven.maven-checkstyle-plugin>3.3.1</plugins.maven.maven-checkstyle-plugin>
 		<plugins.maven.maven-dependency-plugin>3.6.1</plugins.maven.maven-dependency-plugin>
-		<plugins.maven.maven-enforcer-plugin>3.4.1</plugins.maven.maven-enforcer-plugin>
 		<plugins.maven.maven-gpg-plugin>3.1.0</plugins.maven.maven-gpg-plugin>
 		<plugins.maven.maven-help-plugin>3.4.0</plugins.maven.maven-help-plugin>
 		<plugins.maven.maven-javadoc-plugin>3.6.3</plugins.maven.maven-javadoc-plugin>
