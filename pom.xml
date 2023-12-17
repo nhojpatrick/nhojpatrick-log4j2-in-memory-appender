@@ -148,7 +148,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>${plugins.maven.maven-compiler-plugin}</version>
+					<version>${plugins.maven-compiler-plugin}</version>
 					<configuration>
 						<compilerArgs>
 							<arg>-Xpkginfo:always</arg>
@@ -924,10 +924,10 @@
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.20.0</plugins.gitflow-maven-plugin>
 		<plugins.maven-clean-plugin>3.3.2</plugins.maven-clean-plugin>
+		<plugins.maven-compiler-plugin>3.11.0</plugins.maven-compiler-plugin>
 		<plugins.maven-failsafe-plugin>3.2.3</plugins.maven-failsafe-plugin>
 		<plugins.maven-surefire-plugin>3.2.3</plugins.maven-surefire-plugin>
 		<plugins.maven.maven-checkstyle-plugin>3.3.1</plugins.maven.maven-checkstyle-plugin>
-		<plugins.maven.maven-compiler-plugin>3.11.0</plugins.maven.maven-compiler-plugin>
 		<plugins.maven.maven-dependency-plugin>3.6.1</plugins.maven.maven-dependency-plugin>
 		<plugins.maven.maven-deploy-plugin>3.1.1</plugins.maven.maven-deploy-plugin>
 		<plugins.maven.maven-enforcer-plugin>3.4.1</plugins.maven.maven-enforcer-plugin>
