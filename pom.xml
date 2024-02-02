@@ -251,7 +251,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-pmd-plugin</artifactId>
-					<version>${plugins.maven.maven-pmd-plugin}</version>
+					<version>${plugins.maven-pmd-plugin}</version>
 					<configuration>
 						<rulesets>
 							<ruleset>com/github/nhojpatrick/qa/ruleset/pmd/rules.xml</ruleset>
@@ -936,9 +936,9 @@
 		<plugins.maven-install-plugin>3.1.1</plugins.maven-install-plugin>
 		<plugins.maven-jar-plugin>3.3.0</plugins.maven-jar-plugin>
 		<plugins.maven-javadoc-plugin>3.6.3</plugins.maven-javadoc-plugin>
+		<plugins.maven-pmd-plugin>3.21.2</plugins.maven-pmd-plugin>
 		<plugins.maven-surefire-junit5-tree-reporter>1.2.1</plugins.maven-surefire-junit5-tree-reporter>
 		<plugins.maven-surefire-plugin>3.2.5</plugins.maven-surefire-plugin>
-		<plugins.maven.maven-pmd-plugin>3.21.2</plugins.maven.maven-pmd-plugin>
 		<plugins.maven.maven-remote-resources-plugin>3.1.0</plugins.maven.maven-remote-resources-plugin>
 		<plugins.maven.maven-repository-plugin>2.4</plugins.maven.maven-repository-plugin>
 		<plugins.maven.maven-resources-plugin>3.3.1</plugins.maven.maven-resources-plugin>
