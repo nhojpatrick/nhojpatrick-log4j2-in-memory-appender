@@ -347,7 +347,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
-					<version>${plugins.codehaus.build-helper-maven-plugin}</version>
+					<version>${plugins.build-helper-maven-plugin}</version>
 					<executions>
 						<execution>
 							<id>remove-project-artifact-default</id>
@@ -918,7 +918,7 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<surefire.runOrder>random</surefire.runOrder>
 		<!-- plugin versions -->
-		<plugins.codehaus.build-helper-maven-plugin>3.5.0</plugins.codehaus.build-helper-maven-plugin>
+		<plugins.build-helper-maven-plugin>3.5.0</plugins.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.16.2</plugins.codehaus.versions-maven-plugin>
 		<plugins.cyclonedx-maven-plugin>2.7.11</plugins.cyclonedx-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
