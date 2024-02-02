@@ -408,7 +408,7 @@
 				<plugin>
 					<groupId>org.eluder.coveralls</groupId>
 					<artifactId>coveralls-maven-plugin</artifactId>
-					<version>${plugins.org.eluder.coveralls.coveralls-maven-plugin}</version>
+					<version>${plugins.coveralls-maven-plugin}</version>
 					<configuration>
 						<repoToken>${COVERALLS_REPO_TOKEN}</repoToken>
 					</configuration>
@@ -919,6 +919,7 @@
 		<surefire.runOrder>random</surefire.runOrder>
 		<!-- plugin versions -->
 		<plugins.build-helper-maven-plugin>3.5.0</plugins.build-helper-maven-plugin>
+		<plugins.coveralls-maven-plugin>4.3.0</plugins.coveralls-maven-plugin>
 		<plugins.cyclonedx-maven-plugin>2.7.11</plugins.cyclonedx-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.21.0</plugins.gitflow-maven-plugin>
@@ -946,7 +947,6 @@
 		<plugins.maven-surefire-plugin>3.2.5</plugins.maven-surefire-plugin>
 		<plugins.maven-toolchains-plugin>3.1.0</plugins.maven-toolchains-plugin>
 		<plugins.maven-wrapper-plugin>3.2.0</plugins.maven-wrapper-plugin>
-		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.owasp-dependency-check-maven>8.4.3</plugins.owasp-dependency-check-maven>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
 		<plugins.spotbugs-maven-plugin>4.8.3.0</plugins.spotbugs-maven-plugin>
