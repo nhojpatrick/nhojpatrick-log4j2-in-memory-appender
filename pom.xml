@@ -373,7 +373,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
-					<version>${plugins.codehaus.versions-maven-plugin}</version>
+					<version>${plugins.versions-maven-plugin}</version>
 					<dependencies>
 						<dependency>
 							<groupId>com.github.nhojpatrick.qa</groupId>
@@ -919,7 +919,6 @@
 		<surefire.runOrder>random</surefire.runOrder>
 		<!-- plugin versions -->
 		<plugins.build-helper-maven-plugin>3.5.0</plugins.build-helper-maven-plugin>
-		<plugins.codehaus.versions-maven-plugin>2.16.2</plugins.codehaus.versions-maven-plugin>
 		<plugins.cyclonedx-maven-plugin>2.7.11</plugins.cyclonedx-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.21.0</plugins.gitflow-maven-plugin>
@@ -951,6 +950,7 @@
 		<plugins.owasp-dependency-check-maven>8.4.3</plugins.owasp-dependency-check-maven>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
 		<plugins.spotbugs-maven-plugin>4.8.3.0</plugins.spotbugs-maven-plugin>
+		<plugins.versions-maven-plugin>2.16.2</plugins.versions-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.8.3</version.com.github.spotbugs>
 		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.12.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
