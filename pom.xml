@@ -342,7 +342,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-wrapper-plugin</artifactId>
-					<version>${plugins.maven.maven-wrapper-plugin}</version>
+					<version>${plugins.maven-wrapper-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -946,7 +946,7 @@
 		<plugins.maven-surefire-junit5-tree-reporter>1.2.1</plugins.maven-surefire-junit5-tree-reporter>
 		<plugins.maven-surefire-plugin>3.2.5</plugins.maven-surefire-plugin>
 		<plugins.maven-toolchains-plugin>3.1.0</plugins.maven-toolchains-plugin>
-		<plugins.maven.maven-wrapper-plugin>3.2.0</plugins.maven.maven-wrapper-plugin>
+		<plugins.maven-wrapper-plugin>3.2.0</plugins.maven-wrapper-plugin>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.owasp-dependency-check-maven>8.4.3</plugins.owasp-dependency-check-maven>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
