@@ -469,7 +469,7 @@
 				<plugin>
 					<groupId>org.sonatype.plugins</groupId>
 					<artifactId>nexus-staging-maven-plugin</artifactId>
-					<version>${plugins.sonatype.nexus-staging-maven-plugin}</version>
+					<version>${plugins.nexus-staging-maven-plugin}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -947,8 +947,8 @@
 		<plugins.maven-surefire-plugin>3.2.5</plugins.maven-surefire-plugin>
 		<plugins.maven-toolchains-plugin>3.1.0</plugins.maven-toolchains-plugin>
 		<plugins.maven-wrapper-plugin>3.2.0</plugins.maven-wrapper-plugin>
+		<plugins.nexus-staging-maven-plugin>1.6.13</plugins.nexus-staging-maven-plugin>
 		<plugins.owasp-dependency-check-maven>8.4.3</plugins.owasp-dependency-check-maven>
-		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
 		<plugins.spotbugs-maven-plugin>4.8.3.0</plugins.spotbugs-maven-plugin>
 		<plugins.versions-maven-plugin>2.16.2</plugins.versions-maven-plugin>
 		<!-- dependency versions -->
