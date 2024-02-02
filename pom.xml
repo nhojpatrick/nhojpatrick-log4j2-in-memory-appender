@@ -178,7 +178,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>${plugins.maven.maven-dependency-plugin}</version>
+					<version>${plugins.maven-dependency-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -927,6 +927,7 @@
 		<plugins.maven-checkstyle-plugin>3.3.1</plugins.maven-checkstyle-plugin>
 		<plugins.maven-clean-plugin>3.3.2</plugins.maven-clean-plugin>
 		<plugins.maven-compiler-plugin>3.12.1</plugins.maven-compiler-plugin>
+		<plugins.maven-dependency-plugin>3.6.1</plugins.maven-dependency-plugin>
 		<plugins.maven-deploy-plugin>3.1.1</plugins.maven-deploy-plugin>
 		<plugins.maven-enforcer-plugin>3.4.1</plugins.maven-enforcer-plugin>
 		<plugins.maven-failsafe-plugin>3.2.5</plugins.maven-failsafe-plugin>
@@ -934,7 +935,6 @@
 		<plugins.maven-jar-plugin>3.3.0</plugins.maven-jar-plugin>
 		<plugins.maven-surefire-junit5-tree-reporter>1.2.1</plugins.maven-surefire-junit5-tree-reporter>
 		<plugins.maven-surefire-plugin>3.2.5</plugins.maven-surefire-plugin>
-		<plugins.maven.maven-dependency-plugin>3.6.1</plugins.maven.maven-dependency-plugin>
 		<plugins.maven.maven-gpg-plugin>3.1.0</plugins.maven.maven-gpg-plugin>
 		<plugins.maven.maven-help-plugin>3.4.0</plugins.maven.maven-help-plugin>
 		<plugins.maven.maven-javadoc-plugin>3.6.3</plugins.maven.maven-javadoc-plugin>
