@@ -120,7 +120,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-checkstyle-plugin</artifactId>
-					<version>${plugins.maven.maven-checkstyle-plugin}</version>
+					<version>${plugins.maven-checkstyle-plugin}</version>
 					<configuration>
 						<consoleOutput>true</consoleOutput>
 						<failOnViolation>true</failOnViolation>
@@ -924,6 +924,7 @@
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.21.0</plugins.gitflow-maven-plugin>
 		<plugins.jacoco-maven-plugin>0.8.11</plugins.jacoco-maven-plugin>
+		<plugins.maven-checkstyle-plugin>3.3.1</plugins.maven-checkstyle-plugin>
 		<plugins.maven-clean-plugin>3.3.2</plugins.maven-clean-plugin>
 		<plugins.maven-compiler-plugin>3.12.1</plugins.maven-compiler-plugin>
 		<plugins.maven-deploy-plugin>3.1.1</plugins.maven-deploy-plugin>
@@ -931,8 +932,8 @@
 		<plugins.maven-failsafe-plugin>3.2.5</plugins.maven-failsafe-plugin>
 		<plugins.maven-install-plugin>3.1.1</plugins.maven-install-plugin>
 		<plugins.maven-jar-plugin>3.3.0</plugins.maven-jar-plugin>
+		<plugins.maven-surefire-junit5-tree-reporter>1.2.1</plugins.maven-surefire-junit5-tree-reporter>
 		<plugins.maven-surefire-plugin>3.2.5</plugins.maven-surefire-plugin>
-		<plugins.maven.maven-checkstyle-plugin>3.3.1</plugins.maven.maven-checkstyle-plugin>
 		<plugins.maven.maven-dependency-plugin>3.6.1</plugins.maven.maven-dependency-plugin>
 		<plugins.maven.maven-gpg-plugin>3.1.0</plugins.maven.maven-gpg-plugin>
 		<plugins.maven.maven-help-plugin>3.4.0</plugins.maven.maven-help-plugin>
@@ -946,7 +947,6 @@
 		<plugins.maven.maven-source-plugin>3.3.0</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.1.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.maven.maven-wrapper-plugin>3.2.0</plugins.maven.maven-wrapper-plugin>
-		<plugins.maven-surefire-junit5-tree-reporter>1.2.1</plugins.maven-surefire-junit5-tree-reporter>
 		<plugins.org.eluder.coveralls.coveralls-maven-plugin>4.3.0</plugins.org.eluder.coveralls.coveralls-maven-plugin>
 		<plugins.owasp-dependency-check-maven>8.4.3</plugins.owasp-dependency-check-maven>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
