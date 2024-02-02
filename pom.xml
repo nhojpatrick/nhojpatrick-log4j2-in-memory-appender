@@ -273,7 +273,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-repository-plugin</artifactId>
-					<version>${plugins.maven.maven-repository-plugin}</version>
+					<version>${plugins.maven-repository-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -938,9 +938,9 @@
 		<plugins.maven-javadoc-plugin>3.6.3</plugins.maven-javadoc-plugin>
 		<plugins.maven-pmd-plugin>3.21.2</plugins.maven-pmd-plugin>
 		<plugins.maven-remote-resources-plugin>3.1.0</plugins.maven-remote-resources-plugin>
+		<plugins.maven-repository-plugin>2.4</plugins.maven-repository-plugin>
 		<plugins.maven-surefire-junit5-tree-reporter>1.2.1</plugins.maven-surefire-junit5-tree-reporter>
 		<plugins.maven-surefire-plugin>3.2.5</plugins.maven-surefire-plugin>
-		<plugins.maven.maven-repository-plugin>2.4</plugins.maven.maven-repository-plugin>
 		<plugins.maven.maven-resources-plugin>3.3.1</plugins.maven.maven-resources-plugin>
 		<plugins.maven.maven-scm-plugin>2.0.1</plugins.maven.maven-scm-plugin>
 		<plugins.maven.maven-site-plugin>3.12.1</plugins.maven.maven-site-plugin>
