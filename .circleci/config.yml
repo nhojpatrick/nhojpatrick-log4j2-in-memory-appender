@@ -314,7 +314,7 @@ jobs:
 
   qa_owasp_dependency_check:
     docker:
-      - image: cimg/openjdk:8.0
+      - image: cimg/openjdk:11.0
     resource_class: medium
     steps:
       - install_openjdk_11
