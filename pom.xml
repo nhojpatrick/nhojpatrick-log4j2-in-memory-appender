@@ -948,7 +948,7 @@
 		<plugins.maven-toolchains-plugin>3.1.0</plugins.maven-toolchains-plugin>
 		<plugins.maven-wrapper-plugin>3.2.0</plugins.maven-wrapper-plugin>
 		<plugins.nexus-staging-maven-plugin>1.6.13</plugins.nexus-staging-maven-plugin>
-		<plugins.owasp-dependency-check-maven>9.0.4</plugins.owasp-dependency-check-maven>
+		<plugins.owasp-dependency-check-maven>9.0.5</plugins.owasp-dependency-check-maven>
 		<plugins.spotbugs-maven-plugin>4.8.3.0</plugins.spotbugs-maven-plugin>
 		<plugins.versions-maven-plugin>2.16.2</plugins.versions-maven-plugin>
 		<!-- dependency versions -->
