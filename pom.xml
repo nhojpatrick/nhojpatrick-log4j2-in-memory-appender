@@ -921,7 +921,7 @@
 		<plugins.build-helper-maven-plugin>3.5.0</plugins.build-helper-maven-plugin>
 		<plugins.coveralls-maven-plugin>4.3.0</plugins.coveralls-maven-plugin>
 		<plugins.cyclonedx-maven-plugin>2.7.11</plugins.cyclonedx-maven-plugin>
-		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
+		<plugins.ekryd-sortpom-maven-plugin>3.4.0</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.21.0</plugins.gitflow-maven-plugin>
 		<plugins.jacoco-maven-plugin>0.8.11</plugins.jacoco-maven-plugin>
 		<plugins.maven-checkstyle-plugin>3.3.1</plugins.maven-checkstyle-plugin>
