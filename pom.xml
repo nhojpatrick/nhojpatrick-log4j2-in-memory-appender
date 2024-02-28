@@ -955,7 +955,7 @@
 		<version.com.github.spotbugs>4.8.3</version.com.github.spotbugs>
 		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.13.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
 		<version.com.mebigfatguy.sb-contrib.sb-contrib>7.6.4</version.com.mebigfatguy.sb-contrib.sb-contrib>
-		<version.com.puppycrawl.tools.checkstyle>10.13.0</version.com.puppycrawl.tools.checkstyle>
+		<version.com.puppycrawl.tools.checkstyle>10.14.0</version.com.puppycrawl.tools.checkstyle>
 		<version.jp.skypencil.findbugs.slf4j.bug-pattern>1.5.0</version.jp.skypencil.findbugs.slf4j.bug-pattern>
 		<version.org.apache.logging.log4j>2.23.0</version.org.apache.logging.log4j>
 		<version.org.hamcrest>2.2</version.org.hamcrest>
