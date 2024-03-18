@@ -926,7 +926,7 @@
 		<plugins.jacoco-maven-plugin>0.8.11</plugins.jacoco-maven-plugin>
 		<plugins.maven-checkstyle-plugin>3.3.1</plugins.maven-checkstyle-plugin>
 		<plugins.maven-clean-plugin>3.3.2</plugins.maven-clean-plugin>
-		<plugins.maven-compiler-plugin>3.12.1</plugins.maven-compiler-plugin>
+		<plugins.maven-compiler-plugin>3.13.0</plugins.maven-compiler-plugin>
 		<plugins.maven-dependency-plugin>3.6.1</plugins.maven-dependency-plugin>
 		<plugins.maven-deploy-plugin>3.1.1</plugins.maven-deploy-plugin>
 		<plugins.maven-enforcer-plugin>3.4.1</plugins.maven-enforcer-plugin>
