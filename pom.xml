@@ -918,7 +918,7 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<surefire.runOrder>random</surefire.runOrder>
 		<!-- plugin versions -->
-		<plugins.build-helper-maven-plugin>3.5.0</plugins.build-helper-maven-plugin>
+		<plugins.build-helper-maven-plugin>3.6.0</plugins.build-helper-maven-plugin>
 		<plugins.coveralls-maven-plugin>4.3.0</plugins.coveralls-maven-plugin>
 		<plugins.cyclonedx-maven-plugin>2.8.0</plugins.cyclonedx-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
