@@ -406,7 +406,7 @@ workflows:
               - qa_step_profile: "sortpom"
                 qa_step_jdk: "11.0"
               - qa_step_profile: "spotbugs"
-                qa_step_jdk: "11.0"
+                qa_step_jdk: "8.0"
 
       - qa_owasp_dependency_check:
           requires:
