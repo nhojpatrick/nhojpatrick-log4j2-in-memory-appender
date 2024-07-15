@@ -950,7 +950,7 @@
 		<plugins.nexus-staging-maven-plugin>1.7.0</plugins.nexus-staging-maven-plugin>
 		<plugins.owasp-dependency-check-maven>10.0.2</plugins.owasp-dependency-check-maven>
 		<plugins.spotbugs-maven-plugin>4.8.6.2</plugins.spotbugs-maven-plugin>
-		<plugins.versions-maven-plugin>2.17.0</plugins.versions-maven-plugin>
+		<plugins.versions-maven-plugin>2.17.1</plugins.versions-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.8.6</version.com.github.spotbugs>
 		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.13.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
