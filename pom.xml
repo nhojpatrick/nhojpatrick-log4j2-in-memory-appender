@@ -941,7 +941,7 @@
 		<plugins.maven-repository-plugin>2.4</plugins.maven-repository-plugin>
 		<plugins.maven-resources-plugin>3.3.1</plugins.maven-resources-plugin>
 		<plugins.maven-scm-plugin>2.1.0</plugins.maven-scm-plugin>
-		<plugins.maven-site-plugin>3.12.1</plugins.maven-site-plugin>
+		<plugins.maven-site-plugin>3.20.0</plugins.maven-site-plugin>
 		<plugins.maven-source-plugin>3.3.1</plugins.maven-source-plugin>
 		<plugins.maven-surefire-junit5-tree-reporter>1.3.0</plugins.maven-surefire-junit5-tree-reporter>
 		<plugins.maven-surefire-plugin>3.4.0</plugins.maven-surefire-plugin>
