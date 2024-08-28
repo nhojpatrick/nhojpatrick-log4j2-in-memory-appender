@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.nhojpatrick.log4j2.appenders</groupId>
 		<artifactId>nhojpatrick-log4j2-in-memory-appender-parent</artifactId>
-		<version>1.0.5</version>
+		<version>2.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<!--groupId / -->
@@ -46,7 +46,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
+			<artifactId>log4j-slf4j2-impl</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -71,7 +71,7 @@
 	<!--properties / -->
 	<properties>
 		<!-- custom properties -->
-		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory</project.Automatic-Module-Name>
+		<project.Automatic-Module-Name>com.github.nhojpatrick.log4j2.appenders.inmemory2</project.Automatic-Module-Name>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
 		<jacoco.bundle.class.missedcount>0</jacoco.bundle.class.missedcount>

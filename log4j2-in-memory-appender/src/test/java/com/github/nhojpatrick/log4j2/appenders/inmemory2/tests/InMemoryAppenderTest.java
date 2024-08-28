@@ -1,8 +1,8 @@
-package com.github.nhojpatrick.log4j2.appenders.inmemory.tests;
+package com.github.nhojpatrick.log4j2.appenders.inmemory2.tests;
 
-import com.github.nhojpatrick.log4j2.appenders.inmemory.InMemoryAppender;
-import com.github.nhojpatrick.log4j2.appenders.inmemory.InMemoryAppenderHelper;
-import com.github.nhojpatrick.log4j2.appenders.inmemory.LogStatement;
+import com.github.nhojpatrick.log4j2.appenders.inmemory2.InMemoryAppender;
+import com.github.nhojpatrick.log4j2.appenders.inmemory2.InMemoryAppenderHelper;
+import com.github.nhojpatrick.log4j2.appenders.inmemory2.LogStatement;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

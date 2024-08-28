@@ -1,15 +1,16 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":dependencyDashboard",
+    ":disableRateLimiting",
+    ":separateMultipleMajorReleases",
+    ":separatePatchReleases"
   ],
-  "dependencyDashboard": true,
   "excludeCommitPaths": ["relocation/**"],
   "labels": ["dependencies"],
   "assignees" : ["nhojpatrick"],
-  "prHourlyLimit": 0,
-  "separateMinorPatch": true,
-  "separateMultipleMajor": true,
   "circleci": {"enabled": false},
   "docker": {"enabled": false},
-  "docker-compose": {"enabled": false}
+  "docker-compose": {"enabled": false},
+  "rebaseWhen": "never"
 }
