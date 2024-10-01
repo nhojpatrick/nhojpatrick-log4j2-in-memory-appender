@@ -935,7 +935,7 @@
 		<plugins.maven-help-plugin>3.5.0</plugins.maven-help-plugin>
 		<plugins.maven-install-plugin>3.1.3</plugins.maven-install-plugin>
 		<plugins.maven-jar-plugin>3.4.2</plugins.maven-jar-plugin>
-		<plugins.maven-javadoc-plugin>3.10.0</plugins.maven-javadoc-plugin>
+		<plugins.maven-javadoc-plugin>3.10.1</plugins.maven-javadoc-plugin>
 		<plugins.maven-pmd-plugin>3.25.0</plugins.maven-pmd-plugin>
 		<plugins.maven-remote-resources-plugin>3.2.0</plugins.maven-remote-resources-plugin>
 		<plugins.maven-repository-plugin>2.4</plugins.maven-repository-plugin>
