@@ -924,7 +924,7 @@
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.21.0</plugins.gitflow-maven-plugin>
 		<plugins.jacoco-maven-plugin>0.8.12</plugins.jacoco-maven-plugin>
-		<plugins.maven-checkstyle-plugin>3.5.0</plugins.maven-checkstyle-plugin>
+		<plugins.maven-checkstyle-plugin>3.6.0</plugins.maven-checkstyle-plugin>
 		<plugins.maven-clean-plugin>3.4.0</plugins.maven-clean-plugin>
 		<plugins.maven-compiler-plugin>3.13.0</plugins.maven-compiler-plugin>
 		<plugins.maven-dependency-plugin>3.8.1</plugins.maven-dependency-plugin>
