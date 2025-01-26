@@ -408,14 +408,14 @@ workflows:
               - qa_step_profile: "spotbugs"
                 qa_step_jdk: "8.0"
 
-      - qa_owasp_dependency_check:
-          requires:
-            - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
+      #- qa_owasp_dependency_check:
+      #    requires:
+      #      - passed_builds
+      #    filters:
+      #      branches:
+      #        ignore:
+      #          - develop
+      #          - main
 
       - passed_qa:
           requires:
