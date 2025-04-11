@@ -959,7 +959,7 @@
 		<version.jp.skypencil.findbugs.slf4j.bug-pattern>1.5.0</version.jp.skypencil.findbugs.slf4j.bug-pattern>
 		<version.org.apache.logging.log4j>2.24.3</version.org.apache.logging.log4j>
 		<version.org.hamcrest>3.0</version.org.hamcrest>
-		<version.org.junit>5.12.1</version.org.junit>
+		<version.org.junit>5.12.2</version.org.junit>
 		<version.org.slf4j>2.0.17</version.org.slf4j>
 		<!-- qa user properties -->
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
