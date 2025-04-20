@@ -953,7 +953,7 @@
 		<plugins.versions-maven-plugin>2.18.0</plugins.versions-maven-plugin>
 		<!-- dependency versions -->
 		<version.com.github.spotbugs>4.8.6</version.com.github.spotbugs>
-		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.13.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
+		<version.com.h3xstream.findsecbugs.findsecbugs-plugin>1.14.0</version.com.h3xstream.findsecbugs.findsecbugs-plugin>
 		<version.com.mebigfatguy.sb-contrib.sb-contrib>7.6.9</version.com.mebigfatguy.sb-contrib.sb-contrib>
 		<version.com.puppycrawl.tools.checkstyle>10.23.0</version.com.puppycrawl.tools.checkstyle>
 		<version.jp.skypencil.findbugs.slf4j.bug-pattern>1.5.0</version.jp.skypencil.findbugs.slf4j.bug-pattern>
