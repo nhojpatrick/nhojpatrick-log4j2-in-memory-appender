@@ -136,10 +136,10 @@ commands:
     steps:
       - run:
           name: "Maven Jdk8 Clean Install"
-          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean verify -DskipTests -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean verify -DskipTests -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dhttps.protocols=TLSv1.2
       - run:
           name: "Maven Jdk8 Build Jdk11 Tests"
-          command: export JAVA_HOME=/usr/local/openjdk-11 && export PATH=${JAVA_HOME}/bin:{$PATH} && ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd verify -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+          command: export JAVA_HOME=/usr/local/openjdk-11 && export PATH=${JAVA_HOME}/bin:{$PATH} && ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd verify -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dhttps.protocols=TLSv1.2
 
   std_mvnw_jdk11:
     description: "Standard JDK11 mvnw steps"
