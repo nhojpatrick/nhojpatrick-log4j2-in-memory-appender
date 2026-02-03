@@ -929,7 +929,7 @@
 		<plugins.maven-compiler-plugin>3.15.0</plugins.maven-compiler-plugin>
 		<plugins.maven-dependency-plugin>3.9.0</plugins.maven-dependency-plugin>
 		<plugins.maven-deploy-plugin>3.1.4</plugins.maven-deploy-plugin>
-		<plugins.maven-enforcer-plugin>3.6.1</plugins.maven-enforcer-plugin>
+		<plugins.maven-enforcer-plugin>3.6.2</plugins.maven-enforcer-plugin>
 		<plugins.maven-failsafe-plugin>${plugins.maven-surefire}</plugins.maven-failsafe-plugin>
 		<plugins.maven-gpg-plugin>3.2.8</plugins.maven-gpg-plugin>
 		<plugins.maven-help-plugin>3.5.1</plugins.maven-help-plugin>
