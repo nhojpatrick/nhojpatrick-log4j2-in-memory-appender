@@ -394,19 +394,30 @@ workflows:
               ]
               qa_step_jdk: [
                 "8.0",
-                "11.0"
+                "11.0",
+                "17.0"
               ]
             exclude:
               - qa_step_profile: "checkstyle"
                 qa_step_jdk: "8.0"
+              - qa_step_profile: "checkstyle"
+                qa_step_jdk: "11.0"
               - qa_step_profile: "javadoc"
                 qa_step_jdk: "11.0"
+              - qa_step_profile: "javadoc"
+                qa_step_jdk: "17.0"
               - qa_step_profile: "pmd"
                 qa_step_jdk: "11.0"
+              - qa_step_profile: "pmd"
+                qa_step_jdk: "17.0"
               - qa_step_profile: "sortpom"
                 qa_step_jdk: "11.0"
+              - qa_step_profile: "sortpom"
+                qa_step_jdk: "17.0"
               - qa_step_profile: "spotbugs"
                 qa_step_jdk: "8.0"
+              - qa_step_profile: "spotbugs"
+                qa_step_jdk: "17.0"
 
       #- qa_owasp_dependency_check:
       #    requires:
