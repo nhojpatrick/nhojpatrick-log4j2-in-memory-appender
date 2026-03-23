@@ -213,6 +213,17 @@ commands:
                 <jdkHome>${JAVA_HOME}</jdkHome>
               </configuration>
             </toolchain>
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>25</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-25</id>
+              </provides>
+              <configuration>
+                <jdkHome>${JAVA_HOME}</jdkHome>
+              </configuration>
+            </toolchain>
           </toolchains>
           EOF
 
@@ -371,6 +382,7 @@ jobs:
       - setup_openjdk_all_toolchain
       - std_mvnw_jdk_param:
           jdkVersion: "21"
+
   jdk25:
     docker:
       - image: cimg/openjdk:25.0
