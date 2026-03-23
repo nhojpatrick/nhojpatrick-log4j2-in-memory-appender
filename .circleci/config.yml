@@ -160,6 +160,79 @@ commands:
       - run:
           name: "Maven Jdk17 Tests"
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd verify
+  
+  setup_openjdk_all_toolchain:
+    description: "Setup ToolChain for OpenJdk all"
+    steps:
+      - run: mkdir ~/.m2
+      - run: |
+          cat > ~/.m2/toolchains.xml \<< EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>1.8</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-1.8</id>
+              </provides>
+              <configuration>
+                <jdkHome>${JAVA_HOME}</jdkHome>
+              </configuration>
+            </toolchain>
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>11</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-11</id>
+              </provides>
+              <configuration>
+                <jdkHome>${JAVA_HOME}</jdkHome>
+              </configuration>
+            </toolchain>
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>17</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-17</id>
+              </provides>
+              <configuration>
+                <jdkHome>${JAVA_HOME}</jdkHome>
+              </configuration>
+            </toolchain>
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>21</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-21</id>
+              </provides>
+              <configuration>
+                <jdkHome>${JAVA_HOME}</jdkHome>
+              </configuration>
+            </toolchain>
+          </toolchains>
+          EOF
+
+  std_mvnw_jdk_param:
+    parameters:
+      jdkVersion:
+        type: string
+    description: "Standard Java << parameters.jdkVersion >> mvnw steps"
+    steps:
+      - checkout
+      - run:
+          name: "Maven Java << parameters.jdkVersion >> Clean Install SkipTests"
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install -DskipTests
+      - run:
+          name: "Maven Java << parameters.jdkVersion >> Tests"
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd test
+      - run:
+          name: "Tidy Cache before save"
+          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
+          when: always
 
   qa_step:
     parameters:
@@ -291,6 +364,14 @@ jobs:
       #- cache_save:
       #    cacheSaveName: jdk17
 
+  jdk21:
+    docker:
+      - image: cimg/openjdk:21.0
+    steps:
+      - setup_openjdk_all_toolchain
+      - std_mvnw_jdk_param:
+          jdkVersion: "21"
+
   qa_matrix:
     parameters:
       qa_step_profile:
@@ -366,6 +447,12 @@ workflows:
               ignore:
                 - develop
                 - main
+      - jdk21:
+          filters:
+            branches:
+              ignore:
+                - develop
+                - main
 
       - passed_builds:
           requires:
@@ -373,6 +460,7 @@ workflows:
             - jdk8_tests_jdk11
             - jdk11
             - jdk17
+            - jdk21
 
       - qa_matrix:
           name: qa_<< matrix.qa_step_profile >>_jdk_<< matrix.qa_step_jdk >>
