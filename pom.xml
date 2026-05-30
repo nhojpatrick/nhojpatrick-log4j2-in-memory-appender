@@ -960,7 +960,7 @@
 		<plugins.maven-dependency-plugin>3.10.0</plugins.maven-dependency-plugin>
 		<plugins.maven-deploy-plugin>3.1.4</plugins.maven-deploy-plugin>
 		<plugins.maven-enforcer-plugin>3.6.3</plugins.maven-enforcer-plugin>
-		<plugins.maven-failsafe-plugin>3.5.5</plugins.maven-failsafe-plugin>
+		<plugins.maven-failsafe-plugin>${plugins.maven-surefire}</plugins.maven-failsafe-plugin>
 		<plugins.maven-gpg-plugin>3.2.8</plugins.maven-gpg-plugin>
 		<plugins.maven-help-plugin>3.5.1</plugins.maven-help-plugin>
 		<plugins.maven-install-plugin>3.1.4</plugins.maven-install-plugin>
@@ -974,8 +974,8 @@
 		<plugins.maven-site-plugin>3.22.03</plugins.maven-site-plugin>
 		<plugins.maven-source-plugin>3.4.0</plugins.maven-source-plugin>
 		<plugins.maven-surefire-junit5-tree-reporter>1.5.1</plugins.maven-surefire-junit5-tree-reporter>
-		<plugins.maven-surefire>3.5.4</plugins.maven-surefire>
-		<plugins.maven-surefire-plugin>3.5.5</plugins.maven-surefire-plugin>
+		<plugins.maven-surefire>3.5.6</plugins.maven-surefire>
+		<plugins.maven-surefire-plugin>${plugins.maven-surefire}</plugins.maven-surefire-plugin>
 		<plugins.maven-toolchains-plugin>3.2.0</plugins.maven-toolchains-plugin>
 		<plugins.maven-wrapper-plugin>3.3.4</plugins.maven-wrapper-plugin>
 		<plugins.nexus-staging-maven-plugin>1.7.0</plugins.nexus-staging-maven-plugin>
