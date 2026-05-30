@@ -957,7 +957,7 @@
 		<plugins.maven-checkstyle-plugin>3.6.0</plugins.maven-checkstyle-plugin>
 		<plugins.maven-clean-plugin>3.5.0</plugins.maven-clean-plugin>
 		<plugins.maven-compiler-plugin>3.15.0</plugins.maven-compiler-plugin>
-		<plugins.maven-dependency-plugin>3.10.0</plugins.maven-dependency-plugin>
+		<plugins.maven-dependency-plugin>3.11.0</plugins.maven-dependency-plugin>
 		<plugins.maven-deploy-plugin>3.1.4</plugins.maven-deploy-plugin>
 		<plugins.maven-enforcer-plugin>3.6.3</plugins.maven-enforcer-plugin>
 		<plugins.maven-failsafe-plugin>${plugins.maven-surefire}</plugins.maven-failsafe-plugin>
