@@ -962,7 +962,7 @@
 		<plugins.maven-enforcer-plugin>3.6.3</plugins.maven-enforcer-plugin>
 		<plugins.maven-failsafe-plugin>${plugins.maven-surefire}</plugins.maven-failsafe-plugin>
 		<plugins.maven-gpg-plugin>3.2.8</plugins.maven-gpg-plugin>
-		<plugins.maven-help-plugin>3.5.1</plugins.maven-help-plugin>
+		<plugins.maven-help-plugin>3.5.2</plugins.maven-help-plugin>
 		<plugins.maven-install-plugin>3.1.4</plugins.maven-install-plugin>
 		<plugins.maven-jar-plugin>3.5.0</plugins.maven-jar-plugin>
 		<plugins.maven-javadoc-plugin>3.12.0</plugins.maven-javadoc-plugin>
